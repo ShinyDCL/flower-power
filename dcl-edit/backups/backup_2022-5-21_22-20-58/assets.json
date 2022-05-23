@@ -1,0 +1,139 @@
+{
+    "gltfAssets": [
+        {
+            "name": "Bucket",
+            "id": "e2416d9a-fb33-423e-83aa-2534d15a3bfe",
+            "gltfPath": "models/bucket1/Bucket.glb"
+        },
+        {
+            "name": "Well Bucket",
+            "id": "11024e00-c8c5-4ad3-8b7c-e468e2d0adad",
+            "gltfPath": "models/bucket2/Well Bucket.glb"
+        },
+        {
+            "name": "Dirt 04",
+            "id": "723c351e-f332-4abd-b72a-f19eed31bbd4",
+            "gltfPath": "models/dirt/Dirt_04.glb"
+        },
+        {
+            "name": "Fence Wood Medium 01",
+            "id": "5bb3e1c9-120b-4166-ad4d-36a438b747f4",
+            "gltfPath": "models/fence/FenceWoodMedium_01.glb"
+        },
+        {
+            "name": "Floor Base Grass 01",
+            "id": "aabdf546-fa9e-4720-b831-aa7ba65dd0aa",
+            "gltfPath": "models/grass/FloorBaseGrass_01.glb"
+        },
+        {
+            "name": "Pond 02",
+            "id": "bb353141-8f69-4abb-bf80-d47c5d90f0f3",
+            "gltfPath": "models/pond/Pond_02.glb"
+        },
+        {
+            "name": "Flower 02",
+            "id": "75109f12-9e91-4ff1-b592-e330ebd197e9",
+            "gltfPath": "models/rose/Flower_02.glb"
+        },
+        {
+            "name": "Grass05",
+            "id": "77a7ab2f-df29-4d13-949a-bad86644419f",
+            "gltfPath": "models/sprout/Grass05.glb"
+        },
+        {
+            "name": "Store 02",
+            "id": "8b3bc970-d3c0-4e59-961c-3b8bf478f033",
+            "gltfPath": "models/store/Store_02.glb"
+        },
+        {
+            "name": "Flower 01",
+            "id": "80c68aa8-d2c1-4e59-89e1-7531a8039c32",
+            "gltfPath": "models/sunflower/Flower_01.glb"
+        },
+        {
+            "name": "Plant 03",
+            "id": "412127cb-5e2f-406c-9a5a-21975b265b33",
+            "gltfPath": "models/tulip/Plant_03.glb"
+        },
+        {
+            "name": "Beanbag Blue",
+            "id": "077e9b24-d9f8-4e70-b7a4-f71c7e4abc63",
+            "gltfPath": "models/water/Beanbag_Blue.glb"
+        },
+        {
+            "name": "Well 01",
+            "id": "f6338606-d267-4b57-96f8-9bda6b3a8048",
+            "gltfPath": "models/well/Well_01.glb"
+        },
+        {
+            "name": "Well Bucket",
+            "id": "cd5d4d77-77fa-41c1-8bb2-8157767337d9",
+            "gltfPath": "models/bucket/Well Bucket.glb"
+        },
+        {
+            "name": "Cart Big Closed",
+            "id": "4844ccf2-12c5-46c2-80dc-dd4a9f2418c3",
+            "gltfPath": "models/cartBig/Cart Big Closed.glb"
+        },
+        {
+            "name": "Fence Wood End 01",
+            "id": "433af7b2-2bd9-400f-912f-7f9d0772fbe6",
+            "gltfPath": "models/fenceWoodEnd/FenceWoodEnd_01/FenceWoodEnd_01.glb"
+        },
+        {
+            "name": "House 6 M Brown",
+            "id": "b0f35703-ddd9-459b-a276-5a2cb786fef6",
+            "gltfPath": "models/house/House 6 M Brown.glb"
+        },
+        {
+            "name": "Rock Big 07",
+            "id": "be43263b-1121-4d2c-a515-16a3ade2b9c0",
+            "gltfPath": "models/rockWithMoss/RockBig_07/RockBig_07.glb"
+        },
+        {
+            "name": "Signpost Root",
+            "id": "cc7c1c63-30ed-4b8d-a0f2-074c596692e4",
+            "gltfPath": "models/sign/models/signpost/Signpost_Root.glb"
+        },
+        {
+            "name": "Stone Slab Small 02",
+            "id": "b63d47f2-0ed0-49cc-b772-0e1b917bd240",
+            "gltfPath": "models/stoneSlab/StoneSlabSmall_02/StoneSlabSmall_02.glb"
+        },
+        {
+            "name": "Tree Fir 02",
+            "id": "63af8baa-d211-49fa-9950-6f625c6129b3",
+            "gltfPath": "models/treeFir/TreeFir_02.glb"
+        },
+        {
+            "name": "Tree Sycamore 03",
+            "id": "14e6934a-0be3-4467-be48-383359326977",
+            "gltfPath": "models/treeSycamore/TreeSycamore_03/TreeSycamore_03.glb"
+        },
+        {
+            "name": "Axe 2",
+            "id": "5b7ef93a-7a9d-4291-a485-32959fc2a7b9",
+            "gltfPath": "models/axe/Axe 2.glb"
+        },
+        {
+            "name": "Logs 2",
+            "id": "1692b321-161b-4b51-8c16-01d077839515",
+            "gltfPath": "models/logPile/Logs 2.glb"
+        },
+        {
+            "name": "Outdoor Box Lamp",
+            "id": "9d768388-079f-480c-83be-da203214806a",
+            "gltfPath": "models/outdoorLamp/Outdoor Box Lamp.glb"
+        },
+        {
+            "name": "Shovel",
+            "id": "c2e5a4a1-8197-4d67-abce-ae0d0991ef2f",
+            "gltfPath": "models/shovel/Shovel.glb"
+        },
+        {
+            "name": "Window 2x2 V2 Closed",
+            "id": "637d186a-f043-44da-880d-d9ab6fdf503c",
+            "gltfPath": "models/windowClosed/Window 2x2 V2 Closed.glb"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "entityNumberCounter": 8,
+    "entities": [
+        {
+            "hierarchyOrder": 0.0,
+            "name": "Floor Base Grass 01",
+            "uniqueNumber": 7,
+            "parent": -1,
+            "exposed": false,
+            "collapsedChildren": false,
+            "components": [
+                {
+                    "name": "transform",
+                    "specifics": "{\"pos\":{\"x\":22.5,\"y\":0.0,\"z\":9.5},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
+                },
+                {
+                    "name": "GLTFShape",
+                    "specifics": "{\"assetID\":\"aabdf546-fa9e-4720-b831-aa7ba65dd0aa\"}"
+                }
+            ]
+        }
+    ]
+}

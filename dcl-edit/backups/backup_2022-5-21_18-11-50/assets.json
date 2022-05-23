@@ -1,0 +1,69 @@
+{
+    "gltfAssets": [
+        {
+            "name": "Bucket",
+            "id": "e2416d9a-fb33-423e-83aa-2534d15a3bfe",
+            "gltfPath": "models/bucket1/Bucket.glb"
+        },
+        {
+            "name": "Well Bucket",
+            "id": "11024e00-c8c5-4ad3-8b7c-e468e2d0adad",
+            "gltfPath": "models/bucket2/Well Bucket.glb"
+        },
+        {
+            "name": "Dirt 04",
+            "id": "723c351e-f332-4abd-b72a-f19eed31bbd4",
+            "gltfPath": "models/dirt/Dirt_04.glb"
+        },
+        {
+            "name": "Fence Wood Medium 01",
+            "id": "5bb3e1c9-120b-4166-ad4d-36a438b747f4",
+            "gltfPath": "models/fence/FenceWoodMedium_01.glb"
+        },
+        {
+            "name": "Floor Base Grass 01",
+            "id": "aabdf546-fa9e-4720-b831-aa7ba65dd0aa",
+            "gltfPath": "models/grass/FloorBaseGrass_01.glb"
+        },
+        {
+            "name": "Pond 02",
+            "id": "bb353141-8f69-4abb-bf80-d47c5d90f0f3",
+            "gltfPath": "models/pond/Pond_02.glb"
+        },
+        {
+            "name": "Flower 02",
+            "id": "75109f12-9e91-4ff1-b592-e330ebd197e9",
+            "gltfPath": "models/rose/Flower_02.glb"
+        },
+        {
+            "name": "Grass05",
+            "id": "77a7ab2f-df29-4d13-949a-bad86644419f",
+            "gltfPath": "models/sprout/Grass05.glb"
+        },
+        {
+            "name": "Store 02",
+            "id": "8b3bc970-d3c0-4e59-961c-3b8bf478f033",
+            "gltfPath": "models/store/Store_02.glb"
+        },
+        {
+            "name": "Flower 01",
+            "id": "80c68aa8-d2c1-4e59-89e1-7531a8039c32",
+            "gltfPath": "models/sunflower/Flower_01.glb"
+        },
+        {
+            "name": "Plant 03",
+            "id": "412127cb-5e2f-406c-9a5a-21975b265b33",
+            "gltfPath": "models/tulip/Plant_03.glb"
+        },
+        {
+            "name": "Beanbag Blue",
+            "id": "077e9b24-d9f8-4e70-b7a4-f71c7e4abc63",
+            "gltfPath": "models/water/Beanbag_Blue.glb"
+        },
+        {
+            "name": "Well 01",
+            "id": "f6338606-d267-4b57-96f8-9bda6b3a8048",
+            "gltfPath": "models/well/Well_01.glb"
+        }
+    ]
+}
