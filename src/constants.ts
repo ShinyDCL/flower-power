@@ -54,3 +54,10 @@ export const ACTIONS = {
 };
 
 export const GROUND_LEVEL = 0;
+
+export const RESOURCES = {
+  sprout: 'models/sprout/Grass05.glb',
+  tulip: 'models/tulip/Plant_03.glb',
+  rose: 'models/rose/Flower_02.glb',
+  sunflower: 'models/sunflower/Flower_01.glb',
+};

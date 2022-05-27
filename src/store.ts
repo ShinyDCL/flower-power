@@ -15,5 +15,7 @@ export class Store extends Model {
 
   private handleClick(): void {
     inventory.addItem(Item.ROSE_SEED, 3);
+    inventory.addItem(Item.TULIP_SEED, 3);
+    inventory.addItem(Item.SUNFLOWER_SEED, 3);
   }
 }
