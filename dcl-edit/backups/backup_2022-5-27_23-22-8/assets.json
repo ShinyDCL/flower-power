@@ -174,11 +174,6 @@
             "name": "Plant 01",
             "id": "6c749805-9406-4110-8865-d918da2a4b1a",
             "gltfPath": "models/weed4/Plant_01.glb"
-        },
-        {
-            "name": "Signpost Root",
-            "id": "b640ceb9-0bae-49d2-b19c-578202f0c752",
-            "gltfPath": "models/sign/Signpost_Root.glb"
         }
     ]
 }

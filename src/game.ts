@@ -4,6 +4,7 @@ import { Pond } from './pond';
 import { scene } from './scene';
 import { Store } from './store';
 import * as utils from '@dcl/ecs-scene-utils';
+import { Sign } from './sign';
 
 //new Inventory();
 new Store(scene.store);
@@ -20,6 +21,8 @@ new Pond(scene.pond);
 new Bucket(scene.wellBucket1);
 new Bucket(scene.wellBucket2);
 new Bucket(scene.wellBucket3);
+
+new Sign(scene.signGarden, 'Garden & \n Market');
 
 // Create screenspace component
 //const canvas = new UICanvas();

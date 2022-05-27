@@ -1,5 +1,5 @@
 {
-    "entityNumberCounter": 113,
+    "entityNumberCounter": 110,
     "entities": [
         {
             "hierarchyOrder": 79.0,
@@ -1064,7 +1064,7 @@
             ]
         },
         {
-            "hierarchyOrder": 17.0,
+            "hierarchyOrder": 16.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 76,
             "parent": -1,
@@ -1136,7 +1136,25 @@
             ]
         },
         {
-            "hierarchyOrder": 15.0,
+            "hierarchyOrder": 17.0,
+            "name": "Signpost Root Garden",
+            "uniqueNumber": 81,
+            "parent": -1,
+            "exposed": true,
+            "collapsedChildren": false,
+            "components": [
+                {
+                    "name": "transform",
+                    "specifics": "{\"pos\":{\"x\":13.25,\"y\":0.0,\"z\":3.25},\"rot\":{\"x\":0.0,\"y\":0.6087614297866821,\"z\":0.0,\"w\":0.7933534383773804},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
+                },
+                {
+                    "name": "GLTFShape",
+                    "specifics": "{\"assetID\":\"cc7c1c63-30ed-4b8d-a0f2-074c596692e4\"}"
+                }
+            ]
+        },
+        {
+            "hierarchyOrder": 14.0,
             "name": "Shovel",
             "uniqueNumber": 83,
             "parent": -1,
@@ -1154,7 +1172,7 @@
             ]
         },
         {
-            "hierarchyOrder": 16.0,
+            "hierarchyOrder": 15.0,
             "name": "Door",
             "uniqueNumber": 84,
             "parent": -1,
@@ -1172,7 +1190,7 @@
             ]
         },
         {
-            "hierarchyOrder": 14.0,
+            "hierarchyOrder": 13.0,
             "name": "Grass04",
             "uniqueNumber": 85,
             "parent": -1,
@@ -1190,7 +1208,7 @@
             ]
         },
         {
-            "hierarchyOrder": 12.0,
+            "hierarchyOrder": 11.0,
             "name": "Grass 04",
             "uniqueNumber": 91,
             "parent": -1,
@@ -1208,7 +1226,7 @@
             ]
         },
         {
-            "hierarchyOrder": 11.0,
+            "hierarchyOrder": 10.0,
             "name": "Grass 04",
             "uniqueNumber": 92,
             "parent": -1,
@@ -1226,7 +1244,7 @@
             ]
         },
         {
-            "hierarchyOrder": 13.0,
+            "hierarchyOrder": 12.0,
             "name": "Grass 04",
             "uniqueNumber": 93,
             "parent": -1,
@@ -1244,7 +1262,7 @@
             ]
         },
         {
-            "hierarchyOrder": 10.0,
+            "hierarchyOrder": 9.0,
             "name": "Grass04",
             "uniqueNumber": 94,
             "parent": -1,
@@ -1262,7 +1280,7 @@
             ]
         },
         {
-            "hierarchyOrder": 8.0,
+            "hierarchyOrder": 7.0,
             "name": "Grass 04",
             "uniqueNumber": 96,
             "parent": -1,
@@ -1280,7 +1298,7 @@
             ]
         },
         {
-            "hierarchyOrder": 6.0,
+            "hierarchyOrder": 5.0,
             "name": "Grass 04",
             "uniqueNumber": 99,
             "parent": -1,
@@ -1298,7 +1316,7 @@
             ]
         },
         {
-            "hierarchyOrder": 9.0,
+            "hierarchyOrder": 8.0,
             "name": "Grass 04",
             "uniqueNumber": 100,
             "parent": -1,
@@ -1316,7 +1334,7 @@
             ]
         },
         {
-            "hierarchyOrder": 3.0,
+            "hierarchyOrder": 2.0,
             "name": "Grass03",
             "uniqueNumber": 101,
             "parent": -1,
@@ -1334,7 +1352,7 @@
             ]
         },
         {
-            "hierarchyOrder": 7.0,
+            "hierarchyOrder": 6.0,
             "name": "Grass04",
             "uniqueNumber": 102,
             "parent": -1,
@@ -1370,7 +1388,7 @@
             ]
         },
         {
-            "hierarchyOrder": 4.0,
+            "hierarchyOrder": 3.0,
             "name": "Grass03",
             "uniqueNumber": 106,
             "parent": -1,
@@ -1388,7 +1406,7 @@
             ]
         },
         {
-            "hierarchyOrder": 2.0,
+            "hierarchyOrder": 1.0,
             "name": "Grass04",
             "uniqueNumber": 107,
             "parent": -1,
@@ -1406,7 +1424,7 @@
             ]
         },
         {
-            "hierarchyOrder": 5.0,
+            "hierarchyOrder": 4.0,
             "name": "Grass03",
             "uniqueNumber": 108,
             "parent": -1,
@@ -1438,24 +1456,6 @@
                 {
                     "name": "GLTFShape",
                     "specifics": "{\"assetID\":\"aabdf546-fa9e-4720-b831-aa7ba65dd0aa\"}"
-                }
-            ]
-        },
-        {
-            "hierarchyOrder": 1.0,
-            "name": "Sign Garden",
-            "uniqueNumber": 111,
-            "parent": -1,
-            "exposed": true,
-            "collapsedChildren": false,
-            "components": [
-                {
-                    "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":13.25,\"y\":0.0,\"z\":3.25},\"rot\":{\"x\":0.0,\"y\":0.6087614893913269,\"z\":0.0,\"w\":0.7933533787727356},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
-                },
-                {
-                    "name": "GLTFShape",
-                    "specifics": "{\"assetID\":\"b640ceb9-0bae-49d2-b19c-578202f0c752\"}"
                 }
             ]
         }
