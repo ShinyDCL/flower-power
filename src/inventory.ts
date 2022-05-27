@@ -1,6 +1,7 @@
 import * as ui from '@dcl/ui-scene-utils';
 import { Item, ItemKey, ITEM_TITLES, SEEDS } from './constants';
 import { Modal } from './modal';
+import { prompt } from './prompt';
 
 export class Inventory {
   private readonly modal: Modal;
@@ -46,10 +47,10 @@ export class Inventory {
   public showModalSelectSeed(onSelect: (item: Item) => void): void {
     const positionDelta = 65;
     let positionY = 45;
-    this.modal.prompt.elements = [];
 
     SEEDS.forEach((item: Item) => {
       if (this.getSeedCount() > 0) {
+        this.modal.prompt.elements = [];
         this.modal.prompt.addText('Choose a seed', 0, 150, Color4.White(), 30);
         const button = this.modal.prompt.addButton(
           ITEM_TITLES[item],
@@ -57,7 +58,6 @@ export class Inventory {
           positionY,
           (() => {
             this.items[item].decrease(1);
-            //this.events.fireEvent(new SelectItem(source, item));
             this.modal.prompt.hide();
             onSelect(item);
           }).bind(this),
@@ -65,25 +65,10 @@ export class Inventory {
         );
         if (this.items[item].read() <= 0) button.grayOut();
         positionY -= positionDelta;
+        this.modal.prompt.show();
       } else {
-        this.modal.prompt.addText(
-          `You don't have any seeds,`,
-          0,
-          130,
-          Color4.White(),
-          25
-        );
-        this.modal.prompt.addText(
-          `by some at market`,
-          0,
-          90,
-          Color4.White(),
-          25
-        );
+        prompt.openPrompt(`You don't have any seeds, by some at market!`);
       }
     });
-
-    this.modal.prompt.show();
-    //this.modal.prompt.background.visible = false;
   }
 }

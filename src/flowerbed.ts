@@ -10,6 +10,7 @@ import {
 } from './constants';
 import { inventory, userState } from './state';
 import { getRandomIntInclusive, getShape } from './utils';
+import { prompt } from './prompt';
 
 export class Flowerbed extends Model {
   private readonly timer: Timer;
@@ -87,10 +88,10 @@ export class Flowerbed extends Model {
         this.spawnFlower();
         this.entity.removeComponent(OnPointerDown);
       } else {
-        log('Bucket is empty, get water from well or pond');
+        prompt.openPrompt('Bucket is empty, get water from well or pond!');
       }
     } else {
-      log('Pick up bucket and get water from well or pond');
+      prompt.openPrompt('Pick up bucket and get water from well or pond!');
     }
   }
 

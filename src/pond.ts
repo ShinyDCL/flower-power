@@ -1,5 +1,6 @@
 import { ACTIONS } from './constants';
 import { Model } from './model';
+import { prompt } from './prompt';
 import { userState } from './state';
 
 export class Pond extends Model {
@@ -18,12 +19,12 @@ export class Pond extends Model {
 
     if (pickedUpBucket) {
       if (pickedUpBucket.isFull()) {
-        log('Bucket is already full');
+        prompt.openPrompt('Bucket is already full!');
       } else {
         pickedUpBucket.fillUp();
       }
     } else {
-      log('No bucket picked up');
+      prompt.openPrompt('No bucket picked up!');
     }
   }
 }
