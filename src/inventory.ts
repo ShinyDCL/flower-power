@@ -44,6 +44,10 @@ export class Inventory {
     return count;
   }
 
+  public getItemCount(item: Item): number {
+    return this.items[item].read();
+  }
+
   public showModalSelectSeed(onSelect: (item: Item) => void): void {
     const positionDelta = 65;
     let positionY = 45;
@@ -67,7 +71,7 @@ export class Inventory {
         positionY -= positionDelta;
         this.modal.prompt.show();
       } else {
-        prompt.openPrompt(`You don't have any seeds, by some at market!`);
+        prompt.openPrompt(`You don't have any seeds, buy some at market!`);
       }
     });
   }

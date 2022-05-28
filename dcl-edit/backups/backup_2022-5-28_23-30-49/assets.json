@@ -179,21 +179,6 @@
             "name": "Signpost Root",
             "id": "b640ceb9-0bae-49d2-b19c-578202f0c752",
             "gltfPath": "models/sign/Signpost_Root.glb"
-        },
-        {
-            "name": "Fish 03",
-            "id": "c09cf332-3e71-4c4d-91c5-fd99cd53600f",
-            "gltfPath": "models/fishGreen/Fish_03.glb"
-        },
-        {
-            "name": "Fish 02",
-            "id": "9fc77208-8b89-477e-a5fd-8f0fb0e9d079",
-            "gltfPath": "models/fishRed/Fish_02.glb"
-        },
-        {
-            "name": "Fish 01",
-            "id": "e1f483f2-8028-44dd-926f-a45753528306",
-            "gltfPath": "models/fishSilver/Fish_01.glb"
         }
     ]
 }

@@ -1,12 +1,11 @@
 import { Bucket } from './bucket';
 import { Flowerbed } from './flowerbed';
-import { Pond } from './pond';
 import { scene } from './scene';
 import { Store } from './store';
-import * as utils from '@dcl/ecs-scene-utils';
 import { Sign } from './sign';
+import { Well } from './well';
+import { Fish } from './fish';
 
-//new Inventory();
 new Store(scene.store);
 new Flowerbed(scene.dirt1);
 new Flowerbed(scene.dirt2);
@@ -15,14 +14,18 @@ new Flowerbed(scene.dirt4);
 new Flowerbed(scene.dirt5);
 new Flowerbed(scene.dirt6);
 
-//new Garden(6, events);
-
-new Pond(scene.pond);
+new Well(scene.well);
 new Bucket(scene.wellBucket1);
 new Bucket(scene.wellBucket2);
 new Bucket(scene.wellBucket3);
 
 new Sign(scene.signGarden, 'Garden & \n Market');
+
+new Fish();
+
+//setInterval(fish.jump, 1000);
+
+//seedPrompt.openPrompt(() => {});
 
 // Create screenspace component
 //const canvas = new UICanvas();

@@ -3,7 +3,7 @@ import { Model } from './model';
 import { prompt } from './prompt';
 import { userState } from './state';
 
-export class Pond extends Model {
+export class Well extends Model {
   constructor(model: Model) {
     super(model);
 

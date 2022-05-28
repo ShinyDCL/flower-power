@@ -88,10 +88,10 @@ export class Flowerbed extends Model {
         this.spawnFlower();
         this.entity.removeComponent(OnPointerDown);
       } else {
-        prompt.openPrompt('Bucket is empty, get water from well or pond!');
+        prompt.openPrompt('Bucket is empty, get water from well!');
       }
     } else {
-      prompt.openPrompt('Pick up bucket and get water from well or pond!');
+      prompt.openPrompt('Pick up bucket and get water from well!');
     }
   }
 

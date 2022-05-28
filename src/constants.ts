@@ -5,7 +5,8 @@ export enum Item {
   ROSE = 'rose',
   TULIP = 'tulip',
   SUNFLOWER = 'sunflower',
-  WATER = 'water',
+  RED_FISH = 'redFish',
+  GREEN_FISH = 'greenFish',
   COINS = 'coins',
 }
 export type ItemKey = keyof typeof Item;
@@ -23,7 +24,8 @@ export const ITEM_TITLES: { [key in Item]: string } = {
   [Item.ROSE]: 'Rose',
   [Item.TULIP]: 'Tulip',
   [Item.SUNFLOWER]: 'Sunflower',
-  [Item.WATER]: 'Water',
+  [Item.RED_FISH]: 'Red fish',
+  [Item.GREEN_FISH]: 'Green fish',
   [Item.COINS]: 'Coins',
 };
 
@@ -51,6 +53,7 @@ export const ACTIONS = {
   harvest: 'Harvest',
   pickUp: 'Pick up',
   getWater: 'Get water',
+  catch: 'Catch!',
 };
 
 export const GROUND_LEVEL = 0;
@@ -60,4 +63,6 @@ export const RESOURCES = {
   tulip: 'models/tulip/Plant_03.glb',
   rose: 'models/rose/Flower_02.glb',
   sunflower: 'models/sunflower/Flower_01.glb',
+  fishRed: 'models/fishRed/Fish_02.glb',
+  fishGreen: 'models/fishGreen/Fish_03.glb',
 };
