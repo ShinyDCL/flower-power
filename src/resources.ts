@@ -6,6 +6,7 @@ const MODELS = {
   tulip: 'models/tulip/Plant_03.glb',
   rose: 'models/rose/Flower_02.glb',
   sunflower: 'models/sunflower/Flower_01.glb',
+  bean: 'models/bean/Vegetation_05.glb',
   fishRed: 'models/fishRed/Fish_02.glb',
   fishGreen: 'models/fishGreen/Fish_03.glb',
 };

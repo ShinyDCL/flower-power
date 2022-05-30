@@ -1,5 +1,6 @@
 import { Item } from './constants';
 import { Model } from './model';
+import { marketPrompt } from './prompts/index';
 import { inventory } from './state';
 
 export class Store extends Model {
@@ -14,8 +15,9 @@ export class Store extends Model {
   }
 
   private handleClick(): void {
-    inventory.addItem(Item.ROSE_SEED, 3);
-    inventory.addItem(Item.TULIP_SEED, 3);
-    inventory.addItem(Item.SUNFLOWER_SEED, 3);
+    marketPrompt.openPrompt();
+    //inventory.addItem(Item.ROSE_SEED, 3);
+    //inventory.addItem(Item.TULIP_SEED, 3);
+    //inventory.addItem(Item.SUNFLOWER_SEED, 3);
   }
 }

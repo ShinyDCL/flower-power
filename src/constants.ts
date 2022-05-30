@@ -12,6 +12,11 @@ enum Item {
   COINS = 'coins',
 }
 type ItemKey = keyof typeof Item;
+type Seed =
+  | Item.ROSE_SEED
+  | Item.TULIP_SEED
+  | Item.SUNFLOWER_SEED
+  | Item.BEAN_SEED;
 
 const SEED_FLOWER_MAP: { [key: string]: Item } = {
   [Item.ROSE_SEED]: Item.ROSE,
@@ -24,44 +29,60 @@ const ITEM_TITLES: { [key in Item]: string } = {
   [Item.ROSE_SEED]: 'Rose seed',
   [Item.TULIP_SEED]: 'Tulip seed',
   [Item.SUNFLOWER_SEED]: 'Sunflower seed',
-  [Item.BEAN_SEED]: 'Bean seed',
+  [Item.BEAN_SEED]: 'Magic bean seed',
   [Item.ROSE]: 'Rose',
   [Item.TULIP]: 'Tulip',
   [Item.SUNFLOWER]: 'Sunflower',
-  [Item.BEAN]: 'Bean',
+  [Item.BEAN]: 'Magic bean',
   [Item.RED_FISH]: 'Red fish',
   [Item.GREEN_FISH]: 'Green fish',
   [Item.COINS]: 'Coins',
 };
 
-const SEEDS: Item[] = [
+const ITEM_VALUES: { [key in Item]: number } = {
+  [Item.ROSE_SEED]: 5,
+  [Item.TULIP_SEED]: 20,
+  [Item.SUNFLOWER_SEED]: 50,
+  [Item.BEAN_SEED]: 1000,
+  [Item.ROSE]: 10,
+  [Item.TULIP]: 40,
+  [Item.SUNFLOWER]: 100,
+  [Item.BEAN]: 5000,
+  [Item.RED_FISH]: 10,
+  [Item.GREEN_FISH]: 10,
+  [Item.COINS]: 1,
+};
+
+const SEEDS: Seed[] = [
   Item.ROSE_SEED,
   Item.TULIP_SEED,
   Item.SUNFLOWER_SEED,
   Item.BEAN_SEED,
 ];
 
-const SPROUT_TIMES = {
-  [Item.ROSE]: 5,
-  [Item.TULIP]: 10,
-  [Item.SUNFLOWER]: 20,
-  [Item.BEAN]: 40,
+const SPROUT_TIMES: { [key in Seed]: number } = {
+  [Item.ROSE_SEED]: 5,
+  [Item.TULIP_SEED]: 10,
+  [Item.SUNFLOWER_SEED]: 20,
+  [Item.BEAN_SEED]: 40,
 };
 
-const GROW_TIMES = {
-  [Item.ROSE]: 10,
-  [Item.TULIP]: 20,
-  [Item.SUNFLOWER]: 40,
-  [Item.BEAN]: 80,
+const GROW_TIMES: { [key in Seed]: number } = {
+  [Item.ROSE_SEED]: 10,
+  [Item.TULIP_SEED]: 20,
+  [Item.SUNFLOWER_SEED]: 40,
+  [Item.BEAN_SEED]: 80,
 };
 
-const ACTIONS = {
+const ACTIONS: { [key: string]: string } = {
   plant: 'Plant',
   water: 'Water',
   harvest: 'Harvest',
   pickUp: 'Pick up',
   getWater: 'Get water',
   catch: 'Catch!',
+  buy: 'Buy',
+  sell: 'Sell',
 };
 
 const GROUND_LEVEL = 0;
@@ -69,8 +90,10 @@ const GROUND_LEVEL = 0;
 export {
   Item,
   ItemKey,
+  Seed,
   SEED_FLOWER_MAP,
   ITEM_TITLES,
+  ITEM_VALUES,
   SEEDS,
   SPROUT_TIMES,
   GROW_TIMES,

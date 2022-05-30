@@ -1,7 +1,15 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import { Model } from './model';
 import { Timer } from './timer';
-import { ACTIONS, Item, ITEM_TITLES, SEED_FLOWER_MAP } from './constants';
+import {
+  ACTIONS,
+  GROW_TIMES,
+  Item,
+  ITEM_TITLES,
+  Seed,
+  SEED_FLOWER_MAP,
+  SPROUT_TIMES,
+} from './constants';
 import { inventory, userState } from './state';
 import { getRandomIntInclusive, getShape } from './utils';
 import { MODELS } from './resources';
@@ -11,7 +19,7 @@ export class Flowerbed extends Model {
   private readonly timer: Timer;
   private sprout: Entity;
   private flower: Entity;
-  private seed?: Item;
+  private seed?: Seed;
 
   constructor(model: Model) {
     super(model);
@@ -52,19 +60,21 @@ export class Flowerbed extends Model {
     }
   }
 
-  private handleChooseSeed(seed: Item): void {
+  private handleChooseSeed(seed: Seed): void {
     this.seed = seed;
     this.entity.removeComponent(OnPointerDown);
     this.spawnSprout();
   }
 
   private spawnSprout() {
-    this.timer.startCountDown(5);
+    const time = SPROUT_TIMES[this.seed!];
+
+    this.timer.startCountDown(time);
     this.sprout.addComponentOrReplace(
       new utils.ScaleTransformComponent(
         new Vector3(0, 0, 0),
         new Vector3(1, 1, 1),
-        5,
+        time,
         () => {
           this.entity.addComponentOrReplace(
             new OnPointerDown(this.handleClickWater.bind(this), {
@@ -95,6 +105,7 @@ export class Flowerbed extends Model {
   }
 
   private spawnFlower() {
+    const time = SPROUT_TIMES[this.seed!];
     let endScale = new Vector3(1, 1, 1);
 
     switch (this.seed) {
@@ -126,14 +137,23 @@ export class Flowerbed extends Model {
           })
         );
         break;
+      case Item.BEAN_SEED:
+        this.flower.addComponentOrReplace(getShape(MODELS.bean));
+        this.flower.addComponentOrReplace(
+          new Transform({
+            position: new Vector3(0, 0.3, 0),
+          })
+        );
+        endScale = new Vector3(2.25, 5, 2.25);
+        break;
     }
 
-    this.timer.startCountDown(5);
+    this.timer.startCountDown(time);
     this.flower.addComponentOrReplace(
       new utils.ScaleTransformComponent(
         new Vector3(0, 0, 0),
         endScale,
-        5,
+        time,
         () => {
           this.entity.addComponentOrReplace(
             new OnPointerDown(this.handleClickHarvest.bind(this), {
@@ -156,6 +176,7 @@ export class Flowerbed extends Model {
     );
     this.sprout.getComponent(GLTFShape).visible = false;
     this.flower.getComponent(GLTFShape).visible = false;
+    this.seed = undefined;
   }
 
   private getHoverText(action: string): string {

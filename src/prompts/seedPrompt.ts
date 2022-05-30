@@ -1,34 +1,25 @@
 import * as ui from '@dcl/ui-scene-utils';
 import { ItemComponent } from 'src/components/itemComponent';
-import { Item, ITEM_TITLES, SEEDS } from 'src/constants';
+import { Item, ITEM_TITLES, Seed, SEEDS } from 'src/constants';
 import { IMAGE_TEXTURE, ITEM_ICONS, PROMPT_RESOURCES } from 'src/resources';
 import { inventory } from 'src/state';
 import { setSection } from 'src/utils';
 
-export class SeedPrompt {
-  private readonly prompt: ui.CustomPrompt;
-
+export class SeedPrompt extends ui.CustomPrompt {
   constructor() {
-    this.prompt = new ui.CustomPrompt(
-      ui.PromptStyles.DARK,
-      undefined,
-      undefined,
-      true
-    );
+    super(ui.PromptStyles.DARK, undefined, undefined, true);
 
     // Add title
-    this.prompt.addText('Choose a seed', 0, 150, Color4.White(), 30);
+    this.addText('Choose a seed', 0, 150, Color4.White(), 30);
 
     // Override background
-    const { background } = this.prompt;
-    background.source = IMAGE_TEXTURE;
-    background.opacity = 0.97;
-    setSection(background, PROMPT_RESOURCES.background);
+    this.background.source = IMAGE_TEXTURE;
+    this.background.opacity = 0.97;
+    setSection(this.background, PROMPT_RESOURCES.background);
 
     // Override close icon
-    const { closeIcon } = this.prompt;
-    closeIcon.source = IMAGE_TEXTURE;
-    setSection(closeIcon, PROMPT_RESOURCES.closeIcon);
+    this.closeIcon.source = IMAGE_TEXTURE;
+    setSection(this.closeIcon, PROMPT_RESOURCES.closeIcon);
 
     this.addButtons();
   }
@@ -47,7 +38,7 @@ export class SeedPrompt {
       const positionX = startX + column * spaceX;
       const positionY = startY - row * spaceY;
 
-      const button = this.prompt.addButton(
+      const button = this.addButton(
         ITEM_TITLES[item],
         positionX,
         positionY,
@@ -57,7 +48,7 @@ export class SeedPrompt {
       button.addComponent(new ItemComponent(item));
 
       const icon = new ui.CustomPromptIcon(
-        this.prompt,
+        this,
         IMAGE_TEXTURE,
         positionX,
         positionY + imageSize,
@@ -65,12 +56,12 @@ export class SeedPrompt {
         imageSize,
         ITEM_ICONS[item]
       );
-      this.prompt.elements.push(icon);
+      this.elements.push(icon);
     });
   }
 
-  public openPrompt(onSelect: (item: Item) => void): void {
-    const buttons = this.prompt.elements.filter(
+  public openPrompt(onSelect: (seed: Seed) => void): void {
+    const buttons = this.elements.filter(
       (elem) => elem instanceof ui.CustomPromptButton
     ) as ui.CustomPromptButton[];
 
@@ -80,11 +71,11 @@ export class SeedPrompt {
 
       button.image.onClick = new OnPointerDown(() => {
         inventory.removeItem(item, 1);
-        onSelect(item);
-        this.prompt.hide();
+        onSelect(item as Seed);
+        this.hide();
       });
     });
 
-    this.prompt.show();
+    this.show();
   }
 }
