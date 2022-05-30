@@ -14,10 +14,11 @@ export class Bucket extends Model {
     waterShape.visible = false;
     waterShape.isPointerBlocker = false;
 
+    const waterColor = '#9dcffa';
     const waterMaterial = new Material();
-    waterMaterial.albedoColor = Color3.FromHexString('#9dcffa');
+    waterMaterial.albedoColor = Color3.FromHexString(waterColor);
     waterMaterial.metallic = 0;
-    waterMaterial.reflectivityColor = Color3.FromHexString('#9dcffa');
+    waterMaterial.reflectivityColor = Color3.FromHexString(waterColor);
 
     const water = new Entity();
     water.addComponent(waterShape);

@@ -19,3 +19,17 @@ export const getShape = (
 
   return shape;
 };
+
+export interface ImageSection {
+  sourceWidth: number;
+  sourceHeight: number;
+  sourceLeft: number;
+  sourceTop: number;
+}
+
+export const setSection = (image: UIImage, section: ImageSection): void => {
+  image.sourceWidth = section.sourceWidth;
+  image.sourceHeight = section.sourceHeight;
+  image.sourceLeft = section.sourceLeft ? section.sourceLeft : 0;
+  image.sourceTop = section.sourceTop ? section.sourceTop : 0;
+};

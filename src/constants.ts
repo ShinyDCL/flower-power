@@ -1,53 +1,61 @@
-export enum Item {
+enum Item {
   ROSE_SEED = 'roseSeed',
   TULIP_SEED = 'tulipSeed',
   SUNFLOWER_SEED = 'sunflowerSeed',
+  BEAN_SEED = 'beanSeed',
   ROSE = 'rose',
   TULIP = 'tulip',
   SUNFLOWER = 'sunflower',
+  BEAN = 'bean',
   RED_FISH = 'redFish',
   GREEN_FISH = 'greenFish',
   COINS = 'coins',
 }
-export type ItemKey = keyof typeof Item;
+type ItemKey = keyof typeof Item;
 
-export const SEED_FLOWER_MAP: { [key: string]: Item } = {
+const SEED_FLOWER_MAP: { [key: string]: Item } = {
   [Item.ROSE_SEED]: Item.ROSE,
   [Item.TULIP_SEED]: Item.TULIP,
   [Item.SUNFLOWER_SEED]: Item.SUNFLOWER,
+  [Item.BEAN_SEED]: Item.BEAN,
 };
 
-export const ITEM_TITLES: { [key in Item]: string } = {
+const ITEM_TITLES: { [key in Item]: string } = {
   [Item.ROSE_SEED]: 'Rose seed',
   [Item.TULIP_SEED]: 'Tulip seed',
   [Item.SUNFLOWER_SEED]: 'Sunflower seed',
+  [Item.BEAN_SEED]: 'Bean seed',
   [Item.ROSE]: 'Rose',
   [Item.TULIP]: 'Tulip',
   [Item.SUNFLOWER]: 'Sunflower',
+  [Item.BEAN]: 'Bean',
   [Item.RED_FISH]: 'Red fish',
   [Item.GREEN_FISH]: 'Green fish',
   [Item.COINS]: 'Coins',
 };
 
-export const SEEDS: Item[] = [
+const SEEDS: Item[] = [
   Item.ROSE_SEED,
   Item.TULIP_SEED,
   Item.SUNFLOWER_SEED,
+  Item.BEAN_SEED,
 ];
 
-export const SPROUT_TIMES = {
+const SPROUT_TIMES = {
   [Item.ROSE]: 5,
   [Item.TULIP]: 10,
   [Item.SUNFLOWER]: 20,
+  [Item.BEAN]: 40,
 };
 
-export const GROW_TIMES = {
+const GROW_TIMES = {
   [Item.ROSE]: 10,
   [Item.TULIP]: 20,
   [Item.SUNFLOWER]: 40,
+  [Item.BEAN]: 80,
 };
 
-export const ACTIONS = {
+const ACTIONS = {
   plant: 'Plant',
   water: 'Water',
   harvest: 'Harvest',
@@ -56,13 +64,16 @@ export const ACTIONS = {
   catch: 'Catch!',
 };
 
-export const GROUND_LEVEL = 0;
+const GROUND_LEVEL = 0;
 
-export const RESOURCES = {
-  sprout: 'models/sprout/Grass05.glb',
-  tulip: 'models/tulip/Plant_03.glb',
-  rose: 'models/rose/Flower_02.glb',
-  sunflower: 'models/sunflower/Flower_01.glb',
-  fishRed: 'models/fishRed/Fish_02.glb',
-  fishGreen: 'models/fishGreen/Fish_03.glb',
+export {
+  Item,
+  ItemKey,
+  SEED_FLOWER_MAP,
+  ITEM_TITLES,
+  SEEDS,
+  SPROUT_TIMES,
+  GROW_TIMES,
+  ACTIONS,
+  GROUND_LEVEL,
 };

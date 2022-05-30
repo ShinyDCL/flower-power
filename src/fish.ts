@@ -1,10 +1,11 @@
-import { ACTIONS, GROUND_LEVEL, Item, RESOURCES } from './constants';
+import { ACTIONS, GROUND_LEVEL, Item } from './constants';
 import { getRandomDecimal, getRandomIntInclusive, getShape } from './utils';
 import * as utils from '@dcl/ecs-scene-utils';
 import { inventory } from './state';
+import { MODELS } from './resources';
 
-const redFishShape = getShape(RESOURCES.fishRed, true, true, true);
-const greenFishShape = getShape(RESOURCES.fishGreen, true, true, true);
+const redFishShape = getShape(MODELS.fishRed, true, true, true);
+const greenFishShape = getShape(MODELS.fishGreen, true, true, true);
 
 export class Fish extends Entity {
   private parent: Entity;

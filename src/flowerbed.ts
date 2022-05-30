@@ -1,16 +1,11 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import { Model } from './model';
 import { Timer } from './timer';
-import {
-  ACTIONS,
-  Item,
-  ITEM_TITLES,
-  RESOURCES,
-  SEED_FLOWER_MAP,
-} from './constants';
+import { ACTIONS, Item, ITEM_TITLES, SEED_FLOWER_MAP } from './constants';
 import { inventory, userState } from './state';
 import { getRandomIntInclusive, getShape } from './utils';
-import { prompt } from './prompt';
+import { MODELS } from './resources';
+import { seedPrompt, simplePrompt } from './prompts/index';
 
 export class Flowerbed extends Model {
   private readonly timer: Timer;
@@ -31,7 +26,7 @@ export class Flowerbed extends Model {
     this.timer.setParent(this.entity);
 
     this.sprout = new Entity();
-    this.sprout.addComponent(getShape(RESOURCES.sprout, true, false, false));
+    this.sprout.addComponent(getShape(MODELS.sprout, true, false, false));
     this.sprout.addComponent(
       new Transform({
         position: new Vector3(0, 0.3, 0),
@@ -50,7 +45,11 @@ export class Flowerbed extends Model {
   }
 
   private handleClickPlant(): void {
-    inventory.showModalSelectSeed(this.handleChooseSeed.bind(this));
+    if (inventory.getSeedCount() > 0) {
+      seedPrompt.openPrompt(this.handleChooseSeed.bind(this));
+    } else {
+      simplePrompt.openPrompt(`You don't have any seeds, buy some at market!`);
+    }
   }
 
   private handleChooseSeed(seed: Item): void {
@@ -88,10 +87,10 @@ export class Flowerbed extends Model {
         this.spawnFlower();
         this.entity.removeComponent(OnPointerDown);
       } else {
-        prompt.openPrompt('Bucket is empty, get water from well!');
+        simplePrompt.openPrompt('Bucket is empty, get water from well!');
       }
     } else {
-      prompt.openPrompt('Pick up bucket and get water from well!');
+      simplePrompt.openPrompt('Pick up bucket and get water from well!');
     }
   }
 
@@ -100,7 +99,7 @@ export class Flowerbed extends Model {
 
     switch (this.seed) {
       case Item.ROSE_SEED:
-        this.flower.addComponentOrReplace(getShape(RESOURCES.rose));
+        this.flower.addComponentOrReplace(getShape(MODELS.rose));
         this.flower.addComponentOrReplace(
           new Transform({
             position: new Vector3(0.03, 0.6, 0.03),
@@ -110,7 +109,7 @@ export class Flowerbed extends Model {
         endScale = new Vector3(0.5, 0.8, 0.5);
         break;
       case Item.TULIP_SEED:
-        this.flower.addComponentOrReplace(getShape(RESOURCES.tulip));
+        this.flower.addComponentOrReplace(getShape(MODELS.tulip));
         this.flower.addComponentOrReplace(
           new Transform({
             position: new Vector3(-0.02, 0.3, 0),
@@ -119,7 +118,7 @@ export class Flowerbed extends Model {
         );
         break;
       case Item.SUNFLOWER_SEED:
-        this.flower.addComponentOrReplace(getShape(RESOURCES.sunflower));
+        this.flower.addComponentOrReplace(getShape(MODELS.sunflower));
         this.flower.addComponentOrReplace(
           new Transform({
             position: new Vector3(0, 0.6, 0),

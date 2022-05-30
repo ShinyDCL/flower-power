@@ -1,21 +1,28 @@
 import * as ui from '@dcl/ui-scene-utils';
-import { Item, ItemKey, ITEM_TITLES, SEEDS } from './constants';
-import { Modal } from './modal';
-import { prompt } from './prompt';
+import { Item, ItemKey, SEEDS } from './constants';
+import { Image } from './image';
+import { ITEM_ICONS, PROMPT_RESOURCES } from './resources';
 
 export class Inventory {
-  private readonly modal: Modal;
   private readonly items: { [key: string]: ui.UICounter } = {};
 
   constructor() {
     this.renderInventorySidebar();
-    this.modal = new Modal();
   }
 
   private renderInventorySidebar() {
     const keys = Object.keys(Item) as ItemKey[];
-    const offsetX = 0;
-    let offsetY = 500;
+    const offsetX = 10;
+    let offsetY = 80;
+
+    const inventoryBackground = new Image(
+      offsetX - 17,
+      offsetY - 5,
+      100,
+      450,
+      PROMPT_RESOURCES.inventoryBackground
+    );
+    inventoryBackground.image.opacity = 0.9;
 
     keys.forEach((key: ItemKey) => {
       this.items[Item[key]] = new ui.UICounter(
@@ -24,7 +31,9 @@ export class Inventory {
         offsetY,
         Color4.White()
       );
-      offsetY -= 30;
+      new Image(offsetX - 64, offsetY + 7, 36, 36, ITEM_ICONS[Item[key]]);
+
+      offsetY += 40;
     });
   }
 
@@ -46,33 +55,5 @@ export class Inventory {
 
   public getItemCount(item: Item): number {
     return this.items[item].read();
-  }
-
-  public showModalSelectSeed(onSelect: (item: Item) => void): void {
-    const positionDelta = 65;
-    let positionY = 45;
-
-    SEEDS.forEach((item: Item) => {
-      if (this.getSeedCount() > 0) {
-        this.modal.prompt.elements = [];
-        this.modal.prompt.addText('Choose a seed', 0, 150, Color4.White(), 30);
-        const button = this.modal.prompt.addButton(
-          ITEM_TITLES[item],
-          0,
-          positionY,
-          (() => {
-            this.items[item].decrease(1);
-            this.modal.prompt.hide();
-            onSelect(item);
-          }).bind(this),
-          ui.ButtonStyles.ROUNDGOLD
-        );
-        if (this.items[item].read() <= 0) button.grayOut();
-        positionY -= positionDelta;
-        this.modal.prompt.show();
-      } else {
-        prompt.openPrompt(`You don't have any seeds, buy some at market!`);
-      }
-    });
   }
 }

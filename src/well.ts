@@ -1,6 +1,6 @@
 import { ACTIONS } from './constants';
 import { Model } from './model';
-import { prompt } from './prompt';
+import { simplePrompt } from './prompts/index';
 import { userState } from './state';
 
 export class Well extends Model {
@@ -19,12 +19,12 @@ export class Well extends Model {
 
     if (pickedUpBucket) {
       if (pickedUpBucket.isFull()) {
-        prompt.openPrompt('Bucket is already full!');
+        simplePrompt.openPrompt('Bucket is already full!');
       } else {
         pickedUpBucket.fillUp();
       }
     } else {
-      prompt.openPrompt('No bucket picked up!');
+      simplePrompt.openPrompt('No bucket picked up!');
     }
   }
 }
