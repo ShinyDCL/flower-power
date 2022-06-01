@@ -29,7 +29,7 @@ const ITEM_TITLES: { [key in Item]: string } = {
   [Item.ROSE_SEED]: 'Rose seed',
   [Item.TULIP_SEED]: 'Tulip seed',
   [Item.SUNFLOWER_SEED]: 'Sunflower seed',
-  [Item.BEAN_SEED]: 'Magic bean seed',
+  [Item.BEAN_SEED]: 'Bean seed',
   [Item.ROSE]: 'Rose',
   [Item.TULIP]: 'Tulip',
   [Item.SUNFLOWER]: 'Sunflower',

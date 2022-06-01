@@ -54,15 +54,17 @@ export class MarketPrompt extends ui.CustomPrompt {
       const positionX = startX + column * spaceX;
       const positionY = startY - row * spaceY;
 
+      // Skip coins so it is not possible to buy or sell them
+      if (item === Item.COINS) return;
+
       // First four items are seeds which can only be bought
       // The rest of the items are produce which can only be sold
       const action = index < 4 ? ACTIONS.buy : ACTIONS.sell;
-
       const button = this.addButton(
         action,
         positionX,
         positionY,
-        () => {
+        (() => {
           if (action === ACTIONS.buy) {
             inventory.addItem(item, 1);
             inventory.removeItem(Item.COINS, ITEM_VALUES[item]);
@@ -71,13 +73,13 @@ export class MarketPrompt extends ui.CustomPrompt {
             inventory.addItem(Item.COINS, ITEM_VALUES[item]);
           }
           this.updateItemAvailability();
-        },
+        }).bind(this),
         ui.ButtonStyles.ROUNDGOLD
       );
       button.image.width = 140;
       button.image.height = 40;
       button.label.font = new Font(Fonts.SansSerif_SemiBold);
-      button.addComponent(new ItemComponent(item));
+      button.addComponent(new ItemComponent(item, action));
 
       const itemIcon = new ui.CustomPromptIcon(
         this,
@@ -100,11 +102,6 @@ export class MarketPrompt extends ui.CustomPrompt {
     });
   }
 
-  public openPrompt(): void {
-    this.updateItemAvailability();
-    this.show();
-  }
-
   private updateItemAvailability() {
     const buttons = this.elements.filter(
       (elem) => elem instanceof ui.CustomPromptButton
@@ -116,13 +113,17 @@ export class MarketPrompt extends ui.CustomPrompt {
       const action = itemComponent.getAction();
 
       if (action === ACTIONS.buy) {
-        if (inventory.getItemCount(Item.COINS) < ITEM_VALUES[item])
-          button.grayOut();
-        button.enable();
+        inventory.getItemCount(Item.COINS) < ITEM_VALUES[item]
+          ? button.grayOut()
+          : button.enable();
       } else {
-        if (inventory.getItemCount(item) <= 0) button.grayOut();
-        button.enable();
+        inventory.getItemCount(item) <= 0 ? button.grayOut() : button.enable();
       }
     });
+  }
+
+  public openPrompt(): void {
+    this.updateItemAvailability();
+    this.show();
   }
 }

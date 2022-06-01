@@ -67,7 +67,8 @@ export class SeedPrompt extends ui.CustomPrompt {
 
     buttons.forEach((button: ui.CustomPromptButton) => {
       const item = button.getComponent(ItemComponent).getItem();
-      if (inventory.getItemCount(item) <= 0) button.grayOut();
+
+      inventory.getItemCount(item) <= 0 ? button.grayOut() : button.enable();
 
       button.image.onClick = new OnPointerDown(() => {
         inventory.removeItem(item, 1);

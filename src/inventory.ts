@@ -12,13 +12,13 @@ export class Inventory {
 
   private renderInventorySidebar() {
     const keys = Object.keys(Item) as ItemKey[];
-    const offsetX = 10;
+    const offsetX = -5;
     let offsetY = 80;
 
     const inventoryBackground = new Image(
-      offsetX - 17,
+      offsetX,
       offsetY - 5,
-      100,
+      125,
       450,
       PROMPT_RESOURCES.inventoryBackground
     );
@@ -27,11 +27,11 @@ export class Inventory {
     keys.forEach((key: ItemKey) => {
       this.items[Item[key]] = new ui.UICounter(
         0,
-        offsetX,
+        offsetX - 35,
         offsetY,
         Color4.White()
       );
-      new Image(offsetX - 64, offsetY + 7, 36, 36, ITEM_ICONS[Item[key]]);
+      new Image(offsetX - 10, offsetY + 7, 36, 36, ITEM_ICONS[Item[key]]);
 
       offsetY += 40;
     });

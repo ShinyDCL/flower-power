@@ -5,6 +5,8 @@ import { Store } from './store';
 import { Sign } from './sign';
 import { Well } from './well';
 import { Fish } from './fish';
+import { inventory } from './state';
+import { Item } from './constants';
 
 new Store(scene.store);
 new Flowerbed(scene.dirt1);
@@ -22,6 +24,8 @@ new Bucket(scene.wellBucket3);
 new Sign(scene.signGarden, 'Garden & \n Market');
 
 new Fish();
+
+inventory.addItem(Item.ROSE_SEED, 3);
 
 //setInterval(fish.jump, 1000);
 
