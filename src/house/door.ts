@@ -1,6 +1,6 @@
 import * as utils from '@dcl/ecs-scene-utils';
-import { ACTIONS } from '../constants';
-import { Model } from '../model';
+import { ACTIONS } from 'src/constants';
+import { Model } from 'src/model';
 
 export class Door extends Model {
   private readonly openSound = new AudioClip('models/door/sounds/open.mp3');

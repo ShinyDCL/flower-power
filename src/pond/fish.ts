@@ -1,8 +1,8 @@
-import { ACTIONS, GROUND_LEVEL, Item } from './constants';
-import { getRandomDecimal, getRandomIntInclusive, getShape } from './utils';
 import * as utils from '@dcl/ecs-scene-utils';
-import { inventory } from './state';
-import { MODELS } from './resources';
+import { ACTIONS, GROUND_LEVEL, Item } from 'src/constants';
+import { MODELS } from 'src/resources';
+import { inventory } from 'src/state';
+import { getRandomDecimal, getRandomIntInclusive, getShape } from 'src/utils';
 
 const redFishShape = getShape(MODELS.fishRed, true, true, true);
 const greenFishShape = getShape(MODELS.fishGreen, true, true, true);

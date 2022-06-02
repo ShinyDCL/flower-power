@@ -1,6 +1,6 @@
 import { canvas } from '@dcl/ui-scene-utils';
-import { IMAGE_TEXTURE } from './resources';
-import { ImageSection, setSection } from './utils';
+import { IMAGE_TEXTURE } from 'src/resources';
+import { ImageSection, setSection } from 'src/utils';
 
 export class Image extends Entity {
   image: UIImage;

@@ -1,6 +1,4 @@
 import * as utils from '@dcl/ecs-scene-utils';
-import { Model } from './model';
-import { Timer } from './timer';
 import {
   ACTIONS,
   GROW_TIMES,
@@ -9,11 +7,12 @@ import {
   Seed,
   SEED_FLOWER_MAP,
   SPROUT_TIMES,
-} from './constants';
-import { inventory, userState } from './state';
-import { getRandomIntInclusive, getShape } from './utils';
-import { MODELS } from './resources';
-import { seedPrompt, simplePrompt } from './prompts/index';
+} from 'src/constants';
+import { Model } from 'src/model';
+import { MODELS } from 'src/resources';
+import { inventory, userState } from 'src/state';
+import { seedPrompt, simplePrompt, Timer } from 'src/ui/index';
+import { getRandomIntInclusive, getShape } from 'src/utils';
 
 export class Flowerbed extends Model {
   private readonly timer: Timer;

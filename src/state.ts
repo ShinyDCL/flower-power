@@ -1,5 +1,5 @@
-import { Bucket } from './bucket';
 import { Inventory } from './inventory';
+import { Bucket } from './pond/bucket';
 
 interface IUserState {
   pickedUpBucket: Bucket | null;

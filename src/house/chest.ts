@@ -1,5 +1,5 @@
-import { ACTIONS } from '../constants';
-import { Model } from '../model';
+import { ACTIONS } from 'src/constants';
+import { Model } from 'src/model';
 
 export class Chest extends Model {
   private readonly openSound = new AudioClip('models/chest/sounds/open.mp3');

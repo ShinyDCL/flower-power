@@ -1,7 +1,7 @@
-import { ACTIONS } from './constants';
-import { Model } from './model';
-import { simplePrompt } from './prompts/index';
-import { userState } from './state';
+import { ACTIONS } from 'src/constants';
+import { Model } from 'src/model';
+import { userState } from 'src/state';
+import { simplePrompt } from 'src/ui/index';
 
 export class Well extends Model {
   constructor(model: Model) {

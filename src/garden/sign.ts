@@ -1,4 +1,4 @@
-import { Model } from './model';
+import { Model } from 'src/model';
 
 export class Sign extends Model {
   constructor(model: Model, text: string) {

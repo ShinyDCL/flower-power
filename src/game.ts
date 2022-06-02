@@ -1,34 +1,16 @@
-import { Bucket } from './bucket';
-import { Flowerbed } from './flowerbed';
-import { scene } from './scene';
-import { Store } from './store';
-import { Sign } from './sign';
-import { Well } from './well';
-import { Fish } from './fish';
-import { inventory } from './state';
 import { Item } from './constants';
 import { setUpHouse } from './house/house';
+import { setUpGarden } from './garden/garden';
+import { setUpPond } from './pond/pond';
+import { inventory } from './state';
 
-new Store(scene.store);
-new Flowerbed(scene.dirt1);
-new Flowerbed(scene.dirt2);
-new Flowerbed(scene.dirt3);
-new Flowerbed(scene.dirt4);
-new Flowerbed(scene.dirt5);
-new Flowerbed(scene.dirt6);
-
-new Well(scene.well);
-new Bucket(scene.wellBucket1);
-new Bucket(scene.wellBucket2);
-new Bucket(scene.wellBucket3);
-
-new Sign(scene.signGarden, 'Garden & \n Market');
-
-new Fish();
-
+// Add starter seeds to inventory
 inventory.addItem(Item.ROSE_SEED, 3);
 
+// Set up four scene areas
+setUpGarden();
 setUpHouse();
+setUpPond();
 
 //setInterval(fish.jump, 1000);
 

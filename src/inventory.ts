@@ -1,7 +1,7 @@
 import * as ui from '@dcl/ui-scene-utils';
-import { Item, ItemKey, SEEDS } from './constants';
-import { Image } from './image';
-import { ITEM_ICONS, PROMPT_RESOURCES } from './resources';
+import { Item, ItemKey, SEEDS } from 'src/constants';
+import { ITEM_ICONS, PROMPT_RESOURCES } from 'src/resources';
+import { Image } from './ui/image';
 
 export class Inventory {
   private readonly items: { [key: string]: ui.UICounter } = {};

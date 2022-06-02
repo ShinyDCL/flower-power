@@ -1,6 +1,6 @@
-import { ACTIONS, GROUND_LEVEL } from './constants';
-import { Model } from './model';
-import { userState } from './state';
+import { ACTIONS, GROUND_LEVEL } from 'src/constants';
+import { Model } from 'src/model';
+import { userState } from 'src/state';
 
 export class Bucket extends Model {
   private readonly water: Entity;
