@@ -83,6 +83,9 @@ const ACTIONS: { [key: string]: string } = {
   catch: 'Catch!',
   buy: 'Buy',
   sell: 'Sell',
+  open: 'Open',
+  close: 'Close',
+  move: 'Move',
 };
 
 const GROUND_LEVEL = 0;

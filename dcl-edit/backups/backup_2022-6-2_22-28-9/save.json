@@ -1245,10 +1245,10 @@
         },
         {
             "hierarchyOrder": 34.0,
-            "name": "desk 1",
+            "name": "Furnit 4 Desk",
             "uniqueNumber": 125,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {
@@ -1299,10 +1299,10 @@
         },
         {
             "hierarchyOrder": 31.0,
-            "name": "bed",
+            "name": "Bed King",
             "uniqueNumber": 136,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {
@@ -1335,10 +1335,10 @@
         },
         {
             "hierarchyOrder": 29.0,
-            "name": "desk2",
+            "name": "Furnit 4 Desk",
             "uniqueNumber": 139,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {
@@ -1865,7 +1865,7 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":30.5,\"y\":3.700000047683716,\"z\":2.0},\"rot\":{\"x\":0.0,\"y\":0.7071067690849304,\"z\":0.0,\"w\":0.70710688829422},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
+                    "specifics": "{\"pos\":{\"x\":30.5,\"y\":3.5999999046325685,\"z\":2.75},\"rot\":{\"x\":0.0,\"y\":0.7071067690849304,\"z\":0.0,\"w\":0.70710688829422},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
                 },
                 {
                     "name": "GLTFShape",

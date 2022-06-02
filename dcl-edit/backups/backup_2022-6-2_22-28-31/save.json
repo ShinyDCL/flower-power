@@ -1245,10 +1245,10 @@
         },
         {
             "hierarchyOrder": 34.0,
-            "name": "desk 1",
+            "name": "Furnit 4 Desk",
             "uniqueNumber": 125,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {

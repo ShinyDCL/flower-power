@@ -105,7 +105,7 @@ export class Flowerbed extends Model {
   }
 
   private spawnFlower() {
-    const time = SPROUT_TIMES[this.seed!];
+    const time = GROW_TIMES[this.seed!];
     let endScale = new Vector3(1, 1, 1);
 
     switch (this.seed) {
