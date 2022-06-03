@@ -2,6 +2,12 @@ import { ACTIONS, GROUND_LEVEL } from 'src/constants';
 import { Model } from 'src/model';
 import { userState } from 'src/state';
 
+const waterColor = '#9dcffa';
+const waterMaterial = new Material();
+waterMaterial.albedoColor = Color3.FromHexString(waterColor);
+waterMaterial.reflectivityColor = Color3.FromHexString(waterColor);
+waterMaterial.metallic = 0;
+
 export class Bucket extends Model {
   private readonly water: Entity;
   private full: boolean = false;
@@ -13,12 +19,6 @@ export class Bucket extends Model {
     waterShape.withCollisions = false;
     waterShape.visible = false;
     waterShape.isPointerBlocker = false;
-
-    const waterColor = '#9dcffa';
-    const waterMaterial = new Material();
-    waterMaterial.albedoColor = Color3.FromHexString(waterColor);
-    waterMaterial.metallic = 0;
-    waterMaterial.reflectivityColor = Color3.FromHexString(waterColor);
 
     const water = new Entity();
     water.addComponent(waterShape);
