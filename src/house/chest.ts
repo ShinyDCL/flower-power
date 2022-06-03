@@ -12,7 +12,10 @@ export class Chest extends Model {
     super(model);
 
     this.entity.addComponent(
-      new OnPointerDown(this.toggle.bind(this), { hoverText: ACTIONS.open })
+      new OnPointerDown(this.toggle.bind(this), {
+        hoverText: ACTIONS.open,
+        distance: 2,
+      })
     );
 
     const animator = new Animator();

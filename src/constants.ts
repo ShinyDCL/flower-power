@@ -86,6 +86,8 @@ const ACTIONS: { [key: string]: string } = {
   open: 'Open',
   close: 'Close',
   move: 'Move',
+  collect: 'Collect',
+  click: 'Click',
 };
 
 const GROUND_LEVEL = 0;
