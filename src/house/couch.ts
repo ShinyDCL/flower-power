@@ -3,6 +3,7 @@ import { ACTIONS } from 'src/constants';
 import { Model } from 'src/model';
 
 export class Couch extends Model {
+  private readonly clickSound = new AudioClip('models/couch/sounds/click.mp3');
   private isMoved = false;
 
   constructor(model: Model) {
@@ -14,6 +15,7 @@ export class Couch extends Model {
         distance: 2,
       })
     );
+    this.entity.addComponentOrReplace(new AudioSource(this.clickSound));
   }
 
   private toggle() {
@@ -22,8 +24,9 @@ export class Couch extends Model {
     const endPos = new Vector3(endPosX, position.y, position.z);
 
     this.entity.addComponent(
-      new utils.MoveTransformComponent(position, endPos, 1)
+      new utils.MoveTransformComponent(position, endPos, 1.4)
     );
+    this.entity.getComponent(AudioSource).playOnce();
 
     this.isMoved = !this.isMoved;
   }

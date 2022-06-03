@@ -14,7 +14,7 @@ export class Bed extends Model {
     const endPos = new Vector3(endPosX, position.y, position.z);
 
     this.entity.addComponent(
-      new utils.MoveTransformComponent(position, endPos, 1)
+      new utils.MoveTransformComponent(position, endPos, 0.8)
     );
 
     this.isMoved = !this.isMoved;
