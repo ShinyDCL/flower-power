@@ -7,6 +7,7 @@ enum Item {
   TULIP = 'tulip',
   SUNFLOWER = 'sunflower',
   BEAN = 'bean',
+  LEMON = 'lemon',
   RED_FISH = 'redFish',
   GREEN_FISH = 'greenFish',
   COINS = 'coins',
@@ -34,6 +35,7 @@ const ITEM_TITLES: { [key in Item]: string } = {
   [Item.TULIP]: 'Tulip',
   [Item.SUNFLOWER]: 'Sunflower',
   [Item.BEAN]: 'Magic bean',
+  [Item.LEMON]: 'Lemon',
   [Item.RED_FISH]: 'Red fish',
   [Item.GREEN_FISH]: 'Green fish',
   [Item.COINS]: 'Coins',
@@ -48,8 +50,9 @@ const ITEM_VALUES: { [key in Item]: number } = {
   [Item.TULIP]: 40,
   [Item.SUNFLOWER]: 100,
   [Item.BEAN]: 5000,
-  [Item.RED_FISH]: 10,
-  [Item.GREEN_FISH]: 10,
+  [Item.LEMON]: 5,
+  [Item.RED_FISH]: 1,
+  [Item.GREEN_FISH]: 1,
   [Item.COINS]: 1,
 };
 
@@ -89,6 +92,7 @@ const ACTIONS: { [key: string]: string } = {
   collect: 'Collect',
   click: 'Click',
   activate: 'Activate',
+  shake: 'Shake',
 };
 
 const GROUND_LEVEL = 0;

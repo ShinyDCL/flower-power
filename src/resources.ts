@@ -7,6 +7,7 @@ const MODELS = {
   rose: 'models/rose/Flower_02.glb',
   sunflower: 'models/sunflower/Flower_01.glb',
   bean: 'models/bean/Vegetation_05.glb',
+  lemon: 'models/lemon/FoodLemon_01.glb',
   plank: 'models/plank/Wood 2.glb',
   fishRed: 'models/fishRed/Fish_02.glb',
   fishGreen: 'models/fishGreen/Fish_03.glb',
@@ -76,6 +77,11 @@ const ITEM_ICONS: { [key in Item]: ImageSection } = {
     sourceTop: 0,
   },
   [Item.BEAN]: {
+    ...iconSize,
+    sourceLeft: 600,
+    sourceTop: 300,
+  },
+  [Item.LEMON]: {
     ...iconSize,
     sourceLeft: 600,
     sourceTop: 300,

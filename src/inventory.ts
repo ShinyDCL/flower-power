@@ -19,7 +19,7 @@ export class Inventory {
       offsetX,
       offsetY - 5,
       125,
-      450,
+      495,
       PROMPT_RESOURCES.inventoryBackground
     );
     inventoryBackground.image.opacity = 0.9;
