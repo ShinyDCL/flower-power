@@ -314,26 +314,6 @@
             "name": "Vase 1",
             "id": "1e33f659-f6ca-4985-aad0-cc63a4da093d",
             "gltfPath": "models/vase/Vase 1.glb"
-        },
-        {
-            "name": "Cart Medium",
-            "id": "71a8efb8-450f-4e9a-a2b7-c6603df98ffc",
-            "gltfPath": "models/cart/Cart Medium.glb"
-        },
-        {
-            "name": "Construction Debris 01",
-            "id": "95e378e1-fb25-407d-9ef7-20c0387c8f6a",
-            "gltfPath": "models/constructionDebris/ConstructionDebris_01.glb"
-        },
-        {
-            "name": "Food Lemon 01",
-            "id": "d814e4a3-a2fa-4a5f-9734-4dc2320133c4",
-            "gltfPath": "models/lemon/FoodLemon_01.glb"
-        },
-        {
-            "name": "Wood 2",
-            "id": "09012ef0-dfbb-4194-85a6-b8aa60d68564",
-            "gltfPath": "models/plank/Wood 2.glb"
         }
     ]
 }
