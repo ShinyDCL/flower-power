@@ -1,6 +1,7 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import {
   ACTIONS,
+  ACTIVATION_COST,
   GROW_TIMES,
   Item,
   ITEM_TITLES,
@@ -16,11 +17,13 @@ import { getRandomIntInclusive, getShape } from 'src/utils';
 
 export class Flowerbed extends Model {
   private readonly timer: Timer;
+  private isActive: boolean;
   private sprout: Entity;
   private flower: Entity;
   private seed?: Seed;
+  private plank?: Entity;
 
-  constructor(model: Model) {
+  constructor(model: Model, isActive: boolean = false) {
     super(model);
 
     this.transform.rotation = Quaternion.Euler(
@@ -29,6 +32,7 @@ export class Flowerbed extends Model {
       0
     );
 
+    this.isActive = isActive;
     this.timer = new Timer(0, 1.3, 0);
     this.timer.setParent(this.entity);
 
@@ -44,11 +48,26 @@ export class Flowerbed extends Model {
     this.flower = new Entity();
     this.flower.setParent(this.entity);
 
-    this.entity.addComponent(
-      new OnPointerDown(this.handleClickPlant.bind(this), {
-        hoverText: ACTIONS.plant,
-      })
-    );
+    if (isActive) {
+      this.addPlantButton();
+    } else {
+      this.plank = new Entity();
+      this.plank.addComponent(getShape(MODELS.plank, true, false, true));
+      this.plank.addComponent(
+        new Transform({
+          position: new Vector3(0.15, 0, 0.1),
+          rotation: Quaternion.Euler(-90, 0, 90),
+          scale: new Vector3(0.4, 0.5, 0.8),
+        })
+      );
+      this.plank.setParent(this.entity);
+
+      this.entity.addComponent(
+        new OnPointerDown(this.handleClickActivate.bind(this), {
+          hoverText: ACTIONS.activate,
+        })
+      );
+    }
   }
 
   private handleClickPlant(): void {
@@ -56,6 +75,28 @@ export class Flowerbed extends Model {
       seedPrompt.openPrompt(this.handleChooseSeed.bind(this));
     } else {
       simplePrompt.openPrompt(`You don't have any seeds, buy some at market!`);
+    }
+  }
+
+  private handleClickActivate(): void {
+    if (inventory.getItemCount(Item.COINS) >= ACTIVATION_COST) {
+      simplePrompt.openPrompt(
+        'Activate flowerbed!',
+        this.handleActivate.bind(this)
+      );
+    } else {
+      simplePrompt.openPrompt(
+        `You don't have enough coins to activate flowerbed!`
+      );
+    }
+  }
+
+  private handleActivate(): void {
+    if (inventory.getItemCount(Item.COINS) >= ACTIVATION_COST) {
+      inventory.removeItem(Item.COINS, ACTIVATION_COST);
+      this.isActive = true;
+      this.plank && engine.removeEntity(this.plank);
+      this.addPlantButton();
     }
   }
 
@@ -168,11 +209,7 @@ export class Flowerbed extends Model {
     const flower = SEED_FLOWER_MAP[this.seed!];
     inventory.addItem(flower, 1);
 
-    this.entity.addComponentOrReplace(
-      new OnPointerDown(this.handleClickPlant.bind(this), {
-        hoverText: ACTIONS.plant,
-      })
-    );
+    this.addPlantButton();
     this.sprout.getComponent(GLTFShape).visible = false;
     this.flower.getComponent(GLTFShape).visible = false;
     this.seed = undefined;
@@ -181,5 +218,13 @@ export class Flowerbed extends Model {
   private getHoverText(action: string): string {
     const flower = SEED_FLOWER_MAP[this.seed!];
     return `${action} ${this.seed && ITEM_TITLES[flower].toLowerCase()}`;
+  }
+
+  private addPlantButton() {
+    this.entity.addComponentOrReplace(
+      new OnPointerDown(this.handleClickPlant.bind(this), {
+        hoverText: ACTIONS.plant,
+      })
+    );
   }
 }

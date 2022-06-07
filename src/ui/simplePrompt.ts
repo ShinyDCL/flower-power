@@ -18,8 +18,9 @@ export class SimplePrompt extends ui.OkPrompt {
     this.hide();
   }
 
-  public openPrompt(message: string) {
+  public openPrompt(message: string, onAccept: (() => void) | null = null) {
     this.text.value = message;
+    this.onAccept = onAccept;
     this.show();
   }
 }

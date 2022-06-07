@@ -88,9 +88,11 @@ const ACTIONS: { [key: string]: string } = {
   move: 'Move',
   collect: 'Collect',
   click: 'Click',
+  activate: 'Activate',
 };
 
 const GROUND_LEVEL = 0;
+const ACTIVATION_COST = 5000;
 
 export {
   Item,
@@ -104,4 +106,5 @@ export {
   GROW_TIMES,
   ACTIONS,
   GROUND_LEVEL,
+  ACTIVATION_COST,
 };
