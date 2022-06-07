@@ -22,20 +22,20 @@ const iconSize = {
 
 const PROMPT_RESOURCES = {
   background: {
-    sourceWidth: 600,
-    sourceHeight: 400,
+    sourceWidth: 700,
+    sourceHeight: 500,
     sourceLeft: 0,
     sourceTop: 0,
   },
   inventoryBackground: {
-    sourceWidth: 560,
-    sourceHeight: 360,
+    sourceWidth: 660,
+    sourceHeight: 460,
     sourceLeft: 20,
     sourceTop: 20,
   },
   closeIcon: {
     ...iconSize,
-    sourceLeft: 800,
+    sourceLeft: 900,
     sourceTop: 300,
   },
 };
@@ -43,64 +43,73 @@ const PROMPT_RESOURCES = {
 const ITEM_ICONS: { [key in Item]: ImageSection } = {
   [Item.ROSE_SEED]: {
     ...iconSize,
-    sourceLeft: 700,
+    sourceLeft: 800,
     sourceTop: 200,
   },
   [Item.TULIP_SEED]: {
     ...iconSize,
-    sourceLeft: 700,
+    sourceLeft: 800,
     sourceTop: 100,
   },
   [Item.SUNFLOWER_SEED]: {
     ...iconSize,
-    sourceLeft: 700,
+    sourceLeft: 800,
     sourceTop: 0,
   },
   [Item.BEAN_SEED]: {
     ...iconSize,
-    sourceLeft: 700,
+    sourceLeft: 800,
     sourceTop: 300,
   },
   [Item.ROSE]: {
     ...iconSize,
-    sourceLeft: 600,
+    sourceLeft: 700,
     sourceTop: 200,
   },
   [Item.TULIP]: {
     ...iconSize,
-    sourceLeft: 600,
+    sourceLeft: 700,
     sourceTop: 100,
   },
   [Item.SUNFLOWER]: {
     ...iconSize,
-    sourceLeft: 600,
+    sourceLeft: 700,
     sourceTop: 0,
   },
   [Item.BEAN]: {
     ...iconSize,
-    sourceLeft: 600,
+    sourceLeft: 700,
     sourceTop: 300,
   },
   [Item.LEMON]: {
     ...iconSize,
-    sourceLeft: 600,
-    sourceTop: 300,
+    sourceLeft: 800,
+    sourceTop: 400,
   },
   [Item.RED_FISH]: {
     ...iconSize,
-    sourceLeft: 800,
+    sourceLeft: 900,
     sourceTop: 0,
   },
   [Item.GREEN_FISH]: {
     ...iconSize,
-    sourceLeft: 800,
+    sourceLeft: 900,
     sourceTop: 100,
   },
   [Item.COINS]: {
     ...iconSize,
-    sourceLeft: 800,
+    sourceLeft: 900,
     sourceTop: 200,
   },
 };
 
-export { MODELS, IMAGE_TEXTURE, PROMPT_RESOURCES, ITEM_ICONS };
+const CIRCLES = {
+  pink: {
+    sourceWidth: 200,
+    sourceHeight: 200,
+    sourceLeft: 1000,
+    sourceTop: 0,
+  },
+};
+
+export { MODELS, IMAGE_TEXTURE, PROMPT_RESOURCES, ITEM_ICONS, CIRCLES };
