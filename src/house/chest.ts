@@ -14,7 +14,7 @@ export class Chest extends Model {
     this.entity.addComponent(
       new OnPointerDown(this.toggle.bind(this), {
         hoverText: ACTIONS.open,
-        distance: 2,
+        distance: 3,
       })
     );
 

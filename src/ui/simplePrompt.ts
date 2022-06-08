@@ -1,26 +1,51 @@
 import * as ui from '@dcl/ui-scene-utils';
-import { IMAGE_TEXTURE, PROMPT_RESOURCES } from 'src/resources';
-import { setSection } from 'src/utils';
+import { IMAGE_TEXTURE, PROMPT } from 'src/resources';
+import { ImageSection, setSection } from 'src/utils';
+import { Image } from './image';
 
-export class SimplePrompt extends ui.OkPrompt {
-  constructor() {
-    super('', undefined, 'Ok', true);
+export class SimplePrompt {
+  private static prompt: ui.OkPrompt;
+  private static image: Image;
+
+  static create() {
+    const prompt = new ui.OkPrompt('', undefined, 'Ok', true);
 
     // Override background
-    this.background.source = IMAGE_TEXTURE;
-    this.background.opacity = 0.97;
-    setSection(this.background, PROMPT_RESOURCES.background);
+    prompt.background.source = IMAGE_TEXTURE;
+    prompt.background.opacity = 0.97;
+    setSection(prompt.background, PROMPT.background);
 
     // Override close icon
-    this.closeIcon.source = IMAGE_TEXTURE;
-    setSection(this.closeIcon, PROMPT_RESOURCES.closeIcon);
+    prompt.closeIcon.source = IMAGE_TEXTURE;
+    setSection(prompt.closeIcon, PROMPT.close);
 
-    this.hide();
+    prompt.text.positionY = -40;
+
+    this.prompt = prompt;
   }
 
-  public openPrompt(message: string, onAccept: (() => void) | null = null) {
-    this.text.value = message;
-    this.onAccept = onAccept;
-    this.show();
+  static openPrompt(
+    message: string,
+    onAccept?: () => void,
+    imageSection?: ImageSection
+  ) {
+    if (!this.prompt) {
+      this.create();
+    }
+
+    if (imageSection) {
+      const image = new Image(0, 5, 64, 64, imageSection);
+      image.hAlign = 'center';
+      image.vAlign = 'center';
+      image.visible = true;
+      this.image = image;
+    }
+
+    this.prompt.text.value = message;
+    this.prompt.onAccept = () => {
+      this.image.visible = false;
+      onAccept && onAccept();
+    };
+    this.prompt.show();
   }
 }

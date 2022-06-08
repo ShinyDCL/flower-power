@@ -12,7 +12,8 @@ import {
 import { Model } from 'src/model';
 import { MODELS } from 'src/resources';
 import { inventory, userState } from 'src/state';
-import { seedPrompt, simplePrompt, Timer } from 'src/ui/index';
+import { seedPrompt, Timer } from 'src/ui/index';
+import { SimplePrompt } from 'src/ui/simplePrompt';
 import { getRandomIntInclusive, getShape } from 'src/utils';
 
 export class Flowerbed extends Model {
@@ -74,18 +75,18 @@ export class Flowerbed extends Model {
     if (inventory.getSeedCount() > 0) {
       seedPrompt.openPrompt(this.handleChooseSeed.bind(this));
     } else {
-      simplePrompt.openPrompt(`You don't have any seeds, buy some at market!`);
+      SimplePrompt.openPrompt(`You don't have any seeds, buy some at market!`);
     }
   }
 
   private handleClickActivate(): void {
     if (inventory.getItemCount(Item.COINS) >= ACTIVATION_COST) {
-      simplePrompt.openPrompt(
+      SimplePrompt.openPrompt(
         'Activate flowerbed!',
         this.handleActivate.bind(this)
       );
     } else {
-      simplePrompt.openPrompt(
+      SimplePrompt.openPrompt(
         `You don't have enough coins to activate flowerbed!`
       );
     }
@@ -137,10 +138,10 @@ export class Flowerbed extends Model {
         this.spawnFlower();
         this.entity.removeComponent(OnPointerDown);
       } else {
-        simplePrompt.openPrompt('Bucket is empty, get water from well!');
+        SimplePrompt.openPrompt('Bucket is empty, get water from well!');
       }
     } else {
-      simplePrompt.openPrompt('Pick up bucket and get water from well!');
+      SimplePrompt.openPrompt('Pick up bucket and get water from well!');
     }
   }
 

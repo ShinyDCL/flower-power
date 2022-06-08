@@ -20,7 +20,7 @@ const iconSize = {
   sourceHeight: 100,
 };
 
-const PROMPT_RESOURCES = {
+const PROMPT = {
   background: {
     sourceWidth: 700,
     sourceHeight: 500,
@@ -33,7 +33,7 @@ const PROMPT_RESOURCES = {
     sourceLeft: 20,
     sourceTop: 20,
   },
-  closeIcon: {
+  close: {
     ...iconSize,
     sourceLeft: 900,
     sourceTop: 300,
@@ -112,4 +112,12 @@ const CIRCLES = {
   },
 };
 
-export { MODELS, IMAGE_TEXTURE, PROMPT_RESOURCES, ITEM_ICONS, CIRCLES };
+const INVENTORY = {
+  gem: {
+    ...iconSize,
+    sourceLeft: 700,
+    sourceTop: 400,
+  },
+};
+
+export { MODELS, IMAGE_TEXTURE, PROMPT, ITEM_ICONS, CIRCLES, INVENTORY };

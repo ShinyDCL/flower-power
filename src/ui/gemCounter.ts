@@ -1,20 +1,29 @@
 import * as ui from '@dcl/ui-scene-utils';
+import { INVENTORY } from 'src/resources';
+import { Image } from './image';
 
 export class GemCounter {
-  private readonly counter: ui.UICounter;
-  constructor() {
-    this.counter = new ui.UICounter(0, -5, 50, Color4.White());
-    this.counter.hide();
+  private static counter: ui.UICounter;
+  private static image: Image;
+
+  static create() {
+    this.counter = new ui.UICounter(0, -40, 10, Color4.Yellow(), 30);
+    this.image = new Image(-15, 10, 50, 50, INVENTORY.gem);
   }
 
-  public addGem() {
-    if (!this.counter.uiText.visible) {
-      this.counter.show();
+  static addGem() {
+    if (!this.counter) {
+      this.create();
     }
     this.counter.increase(1);
   }
 
-  public getCount() {
+  static getCount() {
     return this.counter.read();
+  }
+
+  static hide() {
+    this.counter.hide();
+    this.image.visible = false;
   }
 }

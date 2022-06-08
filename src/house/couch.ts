@@ -12,7 +12,7 @@ export class Couch extends Model {
     this.entity.addComponentOrReplace(
       new OnPointerDown(this.toggle.bind(this), {
         hoverText: ACTIONS.move,
-        distance: 2,
+        distance: 3,
       })
     );
     this.entity.addComponentOrReplace(new AudioSource(this.clickSound));

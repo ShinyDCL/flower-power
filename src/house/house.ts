@@ -16,7 +16,7 @@ export const setUpHouse = () => {
         candle.toggle();
         bed.toggle();
       },
-      { hoverText: ACTIONS.click, distance: 2 }
+      { hoverText: ACTIONS.click, distance: 3 }
     )
   );
   new Door(scene.door);

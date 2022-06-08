@@ -1,7 +1,7 @@
 import * as ui from '@dcl/ui-scene-utils';
 import { ItemComponent } from 'src/components/itemComponent';
 import { Item, ITEM_TITLES, Seed, SEEDS } from 'src/constants';
-import { IMAGE_TEXTURE, ITEM_ICONS, PROMPT_RESOURCES } from 'src/resources';
+import { IMAGE_TEXTURE, ITEM_ICONS, PROMPT } from 'src/resources';
 import { inventory } from 'src/state';
 import { setSection } from 'src/utils';
 
@@ -15,11 +15,11 @@ export class SeedPrompt extends ui.CustomPrompt {
     // Override background
     this.background.source = IMAGE_TEXTURE;
     this.background.opacity = 0.97;
-    setSection(this.background, PROMPT_RESOURCES.background);
+    setSection(this.background, PROMPT.background);
 
     // Override close icon
     this.closeIcon.source = IMAGE_TEXTURE;
-    setSection(this.closeIcon, PROMPT_RESOURCES.closeIcon);
+    setSection(this.closeIcon, PROMPT.close);
 
     this.addButtons();
   }

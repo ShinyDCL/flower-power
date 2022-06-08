@@ -2,8 +2,7 @@ import { canvas } from '@dcl/ui-scene-utils';
 import { IMAGE_TEXTURE } from 'src/resources';
 import { ImageSection, setSection } from 'src/utils';
 
-export class Image extends Entity {
-  image: UIImage;
+export class Image extends UIImage {
   constructor(
     xOffset: number,
     yOffset: number,
@@ -11,15 +10,14 @@ export class Image extends Entity {
     height: number,
     section: ImageSection
   ) {
-    super();
+    super(canvas, IMAGE_TEXTURE);
 
-    this.image = new UIImage(canvas, IMAGE_TEXTURE);
-    this.image.hAlign = 'right';
-    this.image.vAlign = 'bottom';
-    this.image.positionX = xOffset ? xOffset : 0;
-    this.image.positionY = yOffset ? yOffset : 0;
-    this.image.width = width ? width : 64;
-    this.image.height = height ? height : 64;
-    setSection(this.image, section);
+    this.hAlign = 'right';
+    this.vAlign = 'bottom';
+    this.positionX = xOffset;
+    this.positionY = yOffset;
+    this.width = width;
+    this.height = height;
+    setSection(this, section);
   }
 }

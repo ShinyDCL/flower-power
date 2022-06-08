@@ -1,6 +1,9 @@
-import { ACTIONS } from 'src/constants';
+import { ACTIONS, Item } from 'src/constants';
 import { Model } from 'src/model';
-import { gemCounter, simplePrompt } from 'src/ui/index';
+import { ITEM_ICONS } from 'src/resources';
+import { inventory } from 'src/state';
+import { GemCounter } from 'src/ui/gemCounter';
+import { SimplePrompt } from 'src/ui/simplePrompt';
 
 export class Gem extends Model {
   private readonly collectSound = new AudioClip(
@@ -13,18 +16,24 @@ export class Gem extends Model {
     this.entity.addComponent(
       new OnPointerDown(this.handleCollect.bind(this), {
         hoverText: ACTIONS.collect,
-        distance: 2,
+        distance: 3,
       })
     );
     this.entity.addComponentOrReplace(new AudioSource(this.collectSound));
   }
 
   private handleCollect() {
-    gemCounter.addGem();
+    GemCounter.addGem();
     this.entity.getComponent(AudioSource).playOnce();
 
-    if (gemCounter.getCount() === 5) {
-      simplePrompt.openPrompt('Congrats, you found 5 gems! Here is your gift:');
+    if (GemCounter.getCount() === 5) {
+      inventory.addItem(Item.BEAN_SEED, 1);
+      GemCounter.hide();
+      SimplePrompt.openPrompt(
+        'Congrats, here is your gift!',
+        undefined,
+        ITEM_ICONS[Item.BEAN_SEED]
+      );
     }
 
     // Hide gem after it is picked up
