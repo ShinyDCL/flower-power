@@ -24,7 +24,7 @@ export class Well extends Model {
         pickedUpBucket.fillUp();
       }
     } else {
-      SimplePrompt.openPrompt('No bucket picked up!');
+      SimplePrompt.openPrompt('Pick up bucket first!');
     }
   }
 }

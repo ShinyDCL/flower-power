@@ -5,7 +5,7 @@ import { Image } from './image';
 
 export class SimplePrompt {
   private static prompt: ui.OkPrompt;
-  private static image: Image;
+  private static image?: Image;
 
   static create() {
     const prompt = new ui.OkPrompt('', undefined, 'Ok', true);
@@ -43,7 +43,9 @@ export class SimplePrompt {
 
     this.prompt.text.value = message;
     this.prompt.onAccept = () => {
-      this.image.visible = false;
+      if (this.image) {
+        this.image.visible = false;
+      }
       onAccept && onAccept();
     };
     this.prompt.show();

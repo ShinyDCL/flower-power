@@ -83,7 +83,7 @@ const ACTIONS: { [key: string]: string } = {
   harvest: 'Harvest',
   pickUp: 'Pick up',
   getWater: 'Get water',
-  catch: 'Catch!',
+  catch: 'Catch',
   buy: 'Buy',
   sell: 'Sell',
   open: 'Open',
@@ -93,6 +93,7 @@ const ACTIONS: { [key: string]: string } = {
   click: 'Click',
   activate: 'Activate',
   shake: 'Shake',
+  eat: 'Eat',
 };
 
 const GROUND_LEVEL = 0;

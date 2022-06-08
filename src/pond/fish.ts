@@ -1,4 +1,5 @@
 import * as utils from '@dcl/ecs-scene-utils';
+import * as ui from '@dcl/ui-scene-utils';
 import { ACTIONS, GROUND_LEVEL, Item } from 'src/constants';
 import { MODELS } from 'src/resources';
 import { inventory } from 'src/state';
@@ -16,6 +17,12 @@ export class Fish extends Entity {
       new Transform({
         scale: new Vector3(1.5, 1.5, 1.5),
         rotation: Quaternion.Euler(0, 0, 270),
+      })
+    );
+    // Add interaction to catch fish
+    this.addComponentOrReplace(
+      new OnPointerDown(this.handleCatch.bind(this), {
+        hoverText: ACTIONS.catch,
       })
     );
 
@@ -49,13 +56,6 @@ export class Fish extends Entity {
     );
     this.getComponent(GLTFShape).visible = true;
 
-    // Add interaction to catch fish
-    this.addComponentOrReplace(
-      new OnPointerDown(this.handleCatch.bind(this), {
-        hoverText: ACTIONS.catch,
-      })
-    );
-
     // Move entity
     this.parent.addComponentOrReplace(
       new utils.FollowCurvedPathComponent(path, 1.5, 20, true)
@@ -64,12 +64,11 @@ export class Fish extends Entity {
 
   private handleCatch() {
     const shape = this.getComponent(GLTFShape);
+    const fish = shape === redFishShape ? Item.RED_FISH : Item.GREEN_FISH;
 
-    this.parent.removeComponent(utils.FollowCurvedPathComponent);
-    inventory.addItem(
-      shape === redFishShape ? Item.RED_FISH : Item.GREEN_FISH,
-      1
-    );
+    inventory.addItem(fish, 1);
     shape.visible = false;
+
+    ui.displayAnnouncement('Cought it!', 1, Color4.Yellow(), 40);
   }
 }

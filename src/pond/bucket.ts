@@ -1,6 +1,7 @@
 import { ACTIONS, GROUND_LEVEL } from 'src/constants';
 import { Model } from 'src/model';
 import { userState } from 'src/state';
+import { SimplePrompt } from 'src/ui/simplePrompt';
 
 const waterColor = '#9dcffa';
 const waterMaterial = new Material();
@@ -46,6 +47,11 @@ export class Bucket extends Model {
   }
 
   private handlePickUp(): void {
+    if (userState.pickedUpBucket) {
+      SimplePrompt.openPrompt('You are already carrying a bucket!');
+      return;
+    }
+
     this.entity.removeComponent(OnPointerDown);
     this.entity.setParent(Attachable.AVATAR);
     this.entity.addComponentOrReplace(
