@@ -1,5 +1,5 @@
 import { Model } from 'src/model';
-import { marketPrompt } from 'src/ui/index';
+import { MarketPrompt } from 'src/ui/marketPrompt';
 
 export class Store extends Model {
   constructor(model: Model) {
@@ -13,6 +13,6 @@ export class Store extends Model {
   }
 
   private handleClick(): void {
-    marketPrompt.openPrompt();
+    MarketPrompt.openPrompt();
   }
 }

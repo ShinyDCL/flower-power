@@ -7,6 +7,8 @@ export class Sign extends Model {
     const textShape = new TextShape(text);
     textShape.color = Color3.White();
     textShape.fontSize = 2;
+    textShape.outlineWidth = 0.1;
+    textShape.outlineColor = Color3.Black();
 
     const textEntity = new Entity();
     textEntity.addComponent(textShape);

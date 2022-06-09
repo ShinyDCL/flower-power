@@ -11,13 +11,15 @@ import { IMAGE_TEXTURE, ITEM_ICONS, PROMPT } from 'src/resources';
 import { inventory } from 'src/state';
 import { setSection } from 'src/utils';
 
-export class MarketPrompt extends ui.CustomPrompt {
-  constructor() {
-    super(ui.PromptStyles.DARK, 720, 540, true);
+export class MarketPrompt {
+  private static prompt: ui.CustomPrompt;
+
+  private static create() {
+    const prompt = new ui.CustomPrompt(ui.PromptStyles.DARK, 720, 540, true);
 
     // Add title
-    this.addText('Market', 0, 230, Color4.White(), 30);
-    this.addText(
+    prompt.addText('Market', 0, 230, Color4.White(), 30);
+    prompt.addText(
       'Buy seeds, sell flowers and fish',
       0,
       200,
@@ -26,18 +28,19 @@ export class MarketPrompt extends ui.CustomPrompt {
     );
 
     // Override background
-    this.background.source = IMAGE_TEXTURE;
-    this.background.opacity = 0.97;
-    setSection(this.background, PROMPT.background);
+    prompt.background.source = IMAGE_TEXTURE;
+    prompt.background.opacity = 0.97;
+    setSection(prompt.background, PROMPT.background);
 
     // Override close icon
-    this.closeIcon.source = IMAGE_TEXTURE;
-    setSection(this.closeIcon, PROMPT.close);
+    prompt.closeIcon.source = IMAGE_TEXTURE;
+    setSection(prompt.closeIcon, PROMPT.close);
 
+    this.prompt = prompt;
     this.addButtons();
   }
 
-  private addButtons() {
+  private static addButtons() {
     const spaceX = 160,
       spaceY = 130,
       startX = -240,
@@ -60,7 +63,7 @@ export class MarketPrompt extends ui.CustomPrompt {
       // First four items are seeds which can only be bought
       // The rest of the items are produce which can only be sold
       const action = index < 4 ? ACTIONS.buy : ACTIONS.sell;
-      const button = this.addButton(
+      const button = this.prompt.addButton(
         action,
         positionX,
         positionY,
@@ -82,7 +85,7 @@ export class MarketPrompt extends ui.CustomPrompt {
       button.addComponent(new ItemComponent(item, action));
 
       const itemIcon = new ui.CustomPromptIcon(
-        this,
+        this.prompt,
         IMAGE_TEXTURE,
         positionX,
         positionY + imageSize,
@@ -90,9 +93,9 @@ export class MarketPrompt extends ui.CustomPrompt {
         imageSize,
         ITEM_ICONS[item]
       );
-      this.elements.push(itemIcon);
+      this.prompt.elements.push(itemIcon);
 
-      this.addText(
+      this.prompt.addText(
         `${ITEM_TITLES[item]} | ${ITEM_VALUES[item]} coins`,
         positionX,
         positionY + 50,
@@ -102,8 +105,8 @@ export class MarketPrompt extends ui.CustomPrompt {
     });
   }
 
-  private updateItemAvailability() {
-    const buttons = this.elements.filter(
+  private static updateItemAvailability() {
+    const buttons = this.prompt.elements.filter(
       (elem) => elem instanceof ui.CustomPromptButton
     ) as ui.CustomPromptButton[];
 
@@ -122,8 +125,10 @@ export class MarketPrompt extends ui.CustomPrompt {
     });
   }
 
-  public openPrompt(): void {
+  public static openPrompt(): void {
+    if (!this.prompt) this.create();
+
     this.updateItemAvailability();
-    this.show();
+    this.prompt.show();
   }
 }

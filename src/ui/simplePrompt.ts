@@ -5,10 +5,13 @@ import { Image } from './image';
 
 export class SimplePrompt {
   private static prompt: ui.OkPrompt;
-  private static image?: Image;
+  private static image: Image;
+  private static text: UIText;
 
   static create() {
     const prompt = new ui.OkPrompt('', undefined, 'Ok', true);
+    this.prompt = prompt;
+    prompt.text.positionY = -40;
 
     // Override background
     prompt.background.source = IMAGE_TEXTURE;
@@ -19,35 +22,58 @@ export class SimplePrompt {
     prompt.closeIcon.source = IMAGE_TEXTURE;
     setSection(prompt.closeIcon, PROMPT.close);
 
-    prompt.text.positionY = -40;
+    // Override onClick function for close icon to hide additional elements
+    prompt.closeIcon.onClick = new OnPointerDown(() => {
+      this.image.visible = false;
+      this.text.visible = false;
+      this.prompt.hide();
+    });
 
-    this.prompt = prompt;
+    // Add image between title and accept button
+    const image = new Image(0, 5, 64, 64, PROMPT.background);
+    image.visible = false;
+    image.hAlign = 'center';
+    image.vAlign = 'center';
+    this.image = image;
+
+    // Add text above image
+    const text = new UIText(ui.canvas);
+    text.visible = false;
+    text.hAlign = 'center';
+    text.vAlign = 'center';
+    text.hTextAlign = 'center';
+    text.fontSize = 20;
+    text.positionY = 40;
+    this.text = text;
   }
 
   static openPrompt(
     message: string,
     onAccept?: () => void,
-    imageSection?: ImageSection
+    imageSection?: ImageSection,
+    imageText?: string
   ) {
     if (!this.prompt) {
       this.create();
     }
 
     if (imageSection) {
-      const image = new Image(0, 5, 64, 64, imageSection);
-      image.hAlign = 'center';
-      image.vAlign = 'center';
-      image.visible = true;
-      this.image = image;
+      setSection(this.image, imageSection);
+      this.image.visible = true;
+    }
+
+    if (imageText) {
+      this.text.value = imageText;
+      this.text.visible = true;
     }
 
     this.prompt.text.value = message;
     this.prompt.onAccept = () => {
-      if (this.image) {
-        this.image.visible = false;
-      }
+      this.image.visible = false;
+      this.text.visible = false;
       onAccept && onAccept();
     };
+    this.prompt.close;
     this.prompt.show();
   }
 }

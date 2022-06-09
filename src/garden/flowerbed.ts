@@ -10,19 +10,19 @@ import {
   SPROUT_TIMES,
 } from 'src/constants';
 import { Model } from 'src/model';
-import { MODELS } from 'src/resources';
+import { ITEM_ICONS, MODELS } from 'src/resources';
 import { inventory, userState } from 'src/state';
-import { seedPrompt, Timer } from 'src/ui/index';
+import { SeedPrompt } from 'src/ui/seedPrompt';
 import { SimplePrompt } from 'src/ui/simplePrompt';
+import { Timer } from 'src/ui/timer';
 import { getRandomIntInclusive, getShape } from 'src/utils';
 
 export class Flowerbed extends Model {
   private readonly timer: Timer;
-  private isActive: boolean;
   private sprout: Entity;
   private flower: Entity;
   private seed?: Seed;
-  private plank?: Entity;
+  private text?: Entity;
 
   constructor(model: Model, isActive: boolean = false) {
     super(model);
@@ -33,7 +33,6 @@ export class Flowerbed extends Model {
       0
     );
 
-    this.isActive = isActive;
     this.timer = new Timer(0, 1.3, 0);
     this.timer.setParent(this.entity);
 
@@ -52,17 +51,21 @@ export class Flowerbed extends Model {
     if (isActive) {
       this.addPlantButton();
     } else {
-      this.plank = new Entity();
-      this.plank.addComponent(getShape(MODELS.plank, true, false, true));
-      this.plank.addComponent(
-        new Transform({
-          position: new Vector3(0.15, 0, 0.1),
-          rotation: Quaternion.Euler(-90, 0, 90),
-          scale: new Vector3(0.4, 0.5, 0.8),
-        })
-      );
-      this.plank.setParent(this.entity);
+      const textShape = new TextShape('x');
+      textShape.visible = true;
+      textShape.color = Color3.Yellow();
+      textShape.fontSize = 4;
+      textShape.font = new Font(Fonts.SansSerif_Bold);
+      textShape.billboard = true;
+      textShape.outlineWidth = 0.1;
+      textShape.outlineColor = Color3.Black();
 
+      const text = new Entity();
+      text.addComponent(new Transform({ position: new Vector3(0, 0.5, 0) }));
+      text.addComponent(textShape);
+      text.setParent(this.entity);
+
+      this.text = text;
       this.entity.addComponent(
         new OnPointerDown(this.handleClickActivate.bind(this), {
           hoverText: ACTIONS.activate,
@@ -73,7 +76,7 @@ export class Flowerbed extends Model {
 
   private handleClickPlant(): void {
     if (inventory.getSeedCount() > 0) {
-      seedPrompt.openPrompt(this.handleChooseSeed.bind(this));
+      SeedPrompt.openPrompt(this.handleChooseSeed.bind(this));
     } else {
       SimplePrompt.openPrompt(`You don't have any seeds, buy some at market!`);
     }
@@ -83,11 +86,16 @@ export class Flowerbed extends Model {
     if (inventory.getItemCount(Item.COINS) >= ACTIVATION_COST) {
       SimplePrompt.openPrompt(
         'Activate flowerbed!',
-        this.handleActivate.bind(this)
+        this.handleActivate.bind(this),
+        ITEM_ICONS[Item.COINS],
+        ACTIVATION_COST.toString()
       );
     } else {
       SimplePrompt.openPrompt(
-        `You don't have enough coins to activate flowerbed!`
+        `Not enough coins!`,
+        undefined,
+        ITEM_ICONS[Item.COINS],
+        ACTIVATION_COST.toString()
       );
     }
   }
@@ -95,8 +103,7 @@ export class Flowerbed extends Model {
   private handleActivate(): void {
     if (inventory.getItemCount(Item.COINS) >= ACTIVATION_COST) {
       inventory.removeItem(Item.COINS, ACTIVATION_COST);
-      this.isActive = true;
-      this.plank && engine.removeEntity(this.plank);
+      this.text && engine.removeEntity(this.text);
       this.addPlantButton();
     }
   }
@@ -120,7 +127,6 @@ export class Flowerbed extends Model {
           this.entity.addComponentOrReplace(
             new OnPointerDown(this.handleClickWater.bind(this), {
               hoverText: this.getHoverText(ACTIONS.water),
-              button: ActionButton.PRIMARY,
             })
           );
         }
