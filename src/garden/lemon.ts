@@ -2,15 +2,20 @@ import * as utils from '@dcl/ecs-scene-utils';
 import { ACTIONS, Item } from 'src/constants';
 import { MODELS } from 'src/resources';
 import { inventory } from 'src/state';
-import { getShape } from 'src/utils';
+import { getRandomIntInclusive, getShape } from 'src/utils';
 
 export class Lemon extends Entity {
-  constructor(transform: TransformConstructorArgs, parent: Entity) {
+  private readonly positions: Vector3[];
+
+  constructor(positions: Vector3[], parent: Entity) {
     super();
 
+    this.positions = positions;
     this.addComponentOrReplace(getShape(MODELS.lemon, true, true, true));
-    this.addComponentOrReplace(new Transform(transform));
+    this.addComponentOrReplace(new Transform());
     this.setParent(parent);
+
+    this.spawn();
   }
 
   public drop() {
@@ -21,7 +26,7 @@ export class Lemon extends Entity {
       new utils.MoveTransformComponent(
         position,
         endPos,
-        1,
+        0.3 * position.y,
         this.addPickUpButton.bind(this),
         utils.InterpolationType.EASEOUTEBOUNCE
       )
@@ -40,10 +45,15 @@ export class Lemon extends Entity {
     inventory.addItem(Item.LEMON, 1);
     this.getComponent(GLTFShape).visible = false;
     this.removeComponent(OnPointerDown);
+
+    const timeout = getRandomIntInclusive(10000, 20000);
+    utils.setTimeout(timeout, this.spawn.bind(this));
   }
 
-  public respawn(transform: TransformConstructorArgs) {
-    this.addComponentOrReplace(new Transform(transform));
+  private spawn() {
+    const index = getRandomIntInclusive(0, this.positions.length - 1);
+    const position = this.positions[index];
+    this.getComponent(Transform).position = position.clone();
     this.getComponent(GLTFShape).visible = true;
   }
 }

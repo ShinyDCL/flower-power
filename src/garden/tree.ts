@@ -1,18 +1,9 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import { ACTIONS } from 'src/constants';
 import { Model } from 'src/model';
-import { getRandomIntInclusive } from 'src/utils';
 import { Lemon } from './lemon';
 
 export class Tree extends Model {
-  private readonly lemonPositions: Vector3[] = [
-    new Vector3(1.2, 3.2, 0.4),
-    new Vector3(-1.3, 3, 0.1),
-    new Vector3(-0.3, 3.6, 0.6),
-    new Vector3(-0.4, 3.35, -0.6),
-    new Vector3(0.5, 4.7, -0.5),
-    new Vector3(0.45, 4.85, 0.15),
-  ];
   private readonly lemons: Lemon[] = [];
   private maxShakeCount = 6;
   private shakeCount = 0;
@@ -21,37 +12,45 @@ export class Tree extends Model {
   constructor(model: Model) {
     super(model);
 
-    this.addShakeButton();
+    this.entity.addComponentOrReplace(
+      new OnPointerDown(this.handleShake.bind(this), {
+        hoverText: ACTIONS.shake,
+      })
+    );
     this.transform.rotation = Quaternion.Euler(0, 0, 0);
 
-    for (let i = 0; i < 3; i++) {
-      const index = getRandomIntInclusive(0, 5);
-      const position = this.lemonPositions[index];
-      const lemon = new Lemon({ position }, this.entity);
-      this.lemons.push(lemon);
-    }
+    this.lemons.push(
+      new Lemon(
+        [new Vector3(1.2, 3.2, 0.4), new Vector3(-1.3, 3, 0.1)],
+        this.entity
+      )
+    );
+    this.lemons.push(
+      new Lemon(
+        [new Vector3(-0.3, 3.6, 0.6), new Vector3(-0.4, 3.35, -0.6)],
+        this.entity
+      )
+    );
+    this.lemons.push(
+      new Lemon(
+        [new Vector3(0.5, 4.7, -0.5), new Vector3(0.45, 4.85, 0.15)],
+        this.entity
+      )
+    );
   }
 
   private handleShake() {
-    // Remove shake button when starting to shake tree
-    if (this.shakeCount === 0) {
-      this.entity.removeComponent(OnPointerDown);
-    }
+    if (this.shakeCount === 0) this.shake();
+  }
 
+  /*
+   * Imitates shaking animation by multiple times rotating tree
+   * Method gets call recursively until maximum count of calls is reached
+   */
+  private shake() {
     if (this.shakeCount > this.maxShakeCount) {
       this.shakeCount = 0;
-
-      this.lemons.forEach((lemon: Lemon) => {
-        const timeout = getRandomIntInclusive(10000, 20000);
-        lemon.drop();
-        utils.setTimeout(timeout, () => {
-          const index = getRandomIntInclusive(0, 5);
-          const position = this.lemonPositions[index];
-          lemon.respawn({ position });
-        });
-      });
-      this.addShakeButton();
-
+      this.lemons.forEach((lemon) => lemon.drop());
       return;
     }
 
@@ -69,17 +68,9 @@ export class Tree extends Model {
         startRot,
         endRot,
         0.7,
-        this.handleShake.bind(this),
+        this.shake.bind(this),
         utils.InterpolationType.EASEEXPO
       )
-    );
-  }
-
-  private addShakeButton() {
-    this.entity.addComponentOrReplace(
-      new OnPointerDown(this.handleShake.bind(this), {
-        hoverText: ACTIONS.shake,
-      })
     );
   }
 }

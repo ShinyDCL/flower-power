@@ -50,9 +50,9 @@ const ITEM_VALUES: { [key in Item]: number } = {
   [Item.TULIP]: 40,
   [Item.SUNFLOWER]: 100,
   [Item.BEAN]: 5000,
-  [Item.LEMON]: 5,
-  [Item.RED_FISH]: 1,
-  [Item.GREEN_FISH]: 1,
+  [Item.LEMON]: 2,
+  [Item.RED_FISH]: 2,
+  [Item.GREEN_FISH]: 2,
   [Item.COINS]: 1,
 };
 
