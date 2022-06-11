@@ -8,9 +8,9 @@ const MODELS = {
   sunflower: 'models/sunflower/Flower_01.glb',
   bean: 'models/bean/Vegetation_05.glb',
   lemon: 'models/lemon/FoodLemon_01.glb',
-  plank: 'models/plank/Wood 2.glb',
   fishRed: 'models/fishRed/Fish_02.glb',
   fishGreen: 'models/fishGreen/Fish_03.glb',
+  platform: 'models/platform/Platform.glb',
 };
 
 const IMAGE_TEXTURE = new Texture('images/inventory.png');
@@ -19,6 +19,10 @@ const iconSize = {
   sourceWidth: 100,
   sourceHeight: 100,
 };
+const circleSize = {
+  sourceWidth: 200,
+  sourceHeight: 200,
+};
 
 const PROMPT = {
   background: {
@@ -26,12 +30,6 @@ const PROMPT = {
     sourceHeight: 500,
     sourceLeft: 0,
     sourceTop: 0,
-  },
-  inventoryBackground: {
-    sourceWidth: 660,
-    sourceHeight: 460,
-    sourceLeft: 20,
-    sourceTop: 20,
   },
   close: {
     ...iconSize,
@@ -105,10 +103,24 @@ const ITEM_ICONS: { [key in Item]: ImageSection } = {
 
 const CIRCLES = {
   pink: {
-    sourceWidth: 200,
-    sourceHeight: 200,
+    ...circleSize,
+    sourceLeft: 0,
+    sourceTop: 500,
+  },
+  blue: {
+    ...circleSize,
     sourceLeft: 1000,
-    sourceTop: 0,
+    sourceTop: 200,
+  },
+  yellow: {
+    ...circleSize,
+    sourceLeft: 1000,
+    sourceTop: 400,
+  },
+  green: {
+    ...circleSize,
+    sourceLeft: 1000,
+    sourceTop: 600,
   },
 };
 
@@ -117,6 +129,12 @@ const INVENTORY = {
     ...iconSize,
     sourceLeft: 700,
     sourceTop: 400,
+  },
+  background: {
+    sourceWidth: 660,
+    sourceHeight: 460,
+    sourceLeft: 20,
+    sourceTop: 20,
   },
 };
 

@@ -1,6 +1,6 @@
 import * as ui from '@dcl/ui-scene-utils';
 import { Item, ItemKey, SEEDS } from 'src/constants';
-import { ITEM_ICONS, PROMPT } from 'src/resources';
+import { INVENTORY, ITEM_ICONS } from 'src/resources';
 import { Image } from './ui/image';
 
 export class Inventory {
@@ -20,7 +20,7 @@ export class Inventory {
       offsetY - 5,
       125,
       495,
-      PROMPT.inventoryBackground
+      INVENTORY.background
     );
     inventoryBackground.opacity = 0.9;
 

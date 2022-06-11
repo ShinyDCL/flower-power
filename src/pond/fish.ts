@@ -43,9 +43,9 @@ export class Fish extends Entity {
 
     // Define the positions of the path
     const path = [];
-    path[0] = new Vector3(X1, GROUND_LEVEL - 0.5, Z1);
-    path[1] = new Vector3((X1 + X2) / 2, Y, (Z1 + Z2) / 2);
-    path[2] = new Vector3(X2, GROUND_LEVEL - 0.5, Z2);
+    path.push(new Vector3(X1, GROUND_LEVEL - 0.5, Z1));
+    path.push(new Vector3((X1 + X2) / 2, Y, (Z1 + Z2) / 2));
+    path.push(new Vector3(X2, GROUND_LEVEL - 0.5, Z2));
 
     // Randomize from which side fish starts to jump
     getRandomIntInclusive(1, 2) === 1 && path.reverse();
