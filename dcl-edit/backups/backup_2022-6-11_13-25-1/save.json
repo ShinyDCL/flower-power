@@ -1,5 +1,5 @@
 {
-    "entityNumberCounter": 224,
+    "entityNumberCounter": 223,
     "entities": [
         {
             "hierarchyOrder": 115.0,
@@ -2001,7 +2001,7 @@
         },
         {
             "hierarchyOrder": 5.0,
-            "name": "Mushroom 1",
+            "name": "Mushroom Pink 1",
             "uniqueNumber": 214,
             "parent": -1,
             "exposed": true,
@@ -2018,7 +2018,7 @@
             ]
         },
         {
-            "hierarchyOrder": 2.0,
+            "hierarchyOrder": 1.0,
             "name": "Cart Big Closed",
             "uniqueNumber": 216,
             "parent": -1,
@@ -2037,6 +2037,24 @@
         },
         {
             "hierarchyOrder": 4.0,
+            "name": "Cube Entity",
+            "uniqueNumber": 219,
+            "parent": -1,
+            "exposed": false,
+            "collapsedChildren": false,
+            "components": [
+                {
+                    "name": "transform",
+                    "specifics": "{\"pos\":{\"x\":4.75,\"y\":2.0,\"z\":27.25},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.0,\"y\":4.25,\"z\":1.0}}"
+                },
+                {
+                    "name": "boxShape",
+                    "specifics": ""
+                }
+            ]
+        },
+        {
+            "hierarchyOrder": 3.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 220,
             "parent": -1,
@@ -2054,11 +2072,11 @@
             ]
         },
         {
-            "hierarchyOrder": 3.0,
-            "name": "Mushroom 3",
+            "hierarchyOrder": 2.0,
+            "name": "Mushroom Pink 1",
             "uniqueNumber": 221,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {
@@ -2072,34 +2090,16 @@
             ]
         },
         {
-            "hierarchyOrder": 1.0,
-            "name": "Mushroom 4",
+            "hierarchyOrder": 0.0,
+            "name": "Mushroom Pink 1",
             "uniqueNumber": 222,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":9.25,\"y\":0.0,\"z\":17.0},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
-                },
-                {
-                    "name": "GLTFShape",
-                    "specifics": "{\"assetID\":\"25325769-22d1-4db2-bfc3-ee567608fc6b\"}"
-                }
-            ]
-        },
-        {
-            "hierarchyOrder": 0.0,
-            "name": "Mushroom 2",
-            "uniqueNumber": 223,
-            "parent": -1,
-            "exposed": true,
-            "collapsedChildren": false,
-            "components": [
-                {
-                    "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":15.75,\"y\":0.0,\"z\":28.5},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
+                    "specifics": "{\"pos\":{\"x\":9.25,\"y\":0.0,\"z\":17.5},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
                 },
                 {
                     "name": "GLTFShape",

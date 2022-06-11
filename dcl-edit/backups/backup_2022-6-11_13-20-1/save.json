@@ -1,8 +1,8 @@
 {
-    "entityNumberCounter": 224,
+    "entityNumberCounter": 221,
     "entities": [
         {
-            "hierarchyOrder": 115.0,
+            "hierarchyOrder": 114.0,
             "name": "Floor Base Grass 01",
             "uniqueNumber": 7,
             "parent": -1,
@@ -20,7 +20,7 @@
             ]
         },
         {
-            "hierarchyOrder": 116.0,
+            "hierarchyOrder": 115.0,
             "name": "Floor Base Grass 01",
             "uniqueNumber": 10,
             "parent": -1,
@@ -38,7 +38,7 @@
             ]
         },
         {
-            "hierarchyOrder": 114.0,
+            "hierarchyOrder": 113.0,
             "name": "Floor Base Grass 01",
             "uniqueNumber": 11,
             "parent": -1,
@@ -56,7 +56,7 @@
             ]
         },
         {
-            "hierarchyOrder": 109.0,
+            "hierarchyOrder": 108.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 12,
             "parent": -1,
@@ -74,7 +74,7 @@
             ]
         },
         {
-            "hierarchyOrder": 112.0,
+            "hierarchyOrder": 111.0,
             "name": "House 6 M Brown",
             "uniqueNumber": 14,
             "parent": -1,
@@ -92,7 +92,7 @@
             ]
         },
         {
-            "hierarchyOrder": 107.0,
+            "hierarchyOrder": 106.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 15,
             "parent": -1,
@@ -110,7 +110,7 @@
             ]
         },
         {
-            "hierarchyOrder": 111.0,
+            "hierarchyOrder": 110.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 16,
             "parent": -1,
@@ -128,7 +128,7 @@
             ]
         },
         {
-            "hierarchyOrder": 110.0,
+            "hierarchyOrder": 109.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 17,
             "parent": -1,
@@ -146,7 +146,7 @@
             ]
         },
         {
-            "hierarchyOrder": 108.0,
+            "hierarchyOrder": 107.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 18,
             "parent": -1,
@@ -164,7 +164,7 @@
             ]
         },
         {
-            "hierarchyOrder": 106.0,
+            "hierarchyOrder": 105.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 19,
             "parent": -1,
@@ -182,7 +182,7 @@
             ]
         },
         {
-            "hierarchyOrder": 105.0,
+            "hierarchyOrder": 104.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 20,
             "parent": -1,
@@ -200,7 +200,7 @@
             ]
         },
         {
-            "hierarchyOrder": 104.0,
+            "hierarchyOrder": 103.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 23,
             "parent": -1,
@@ -218,7 +218,7 @@
             ]
         },
         {
-            "hierarchyOrder": 100.0,
+            "hierarchyOrder": 99.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 25,
             "parent": -1,
@@ -236,7 +236,7 @@
             ]
         },
         {
-            "hierarchyOrder": 102.0,
+            "hierarchyOrder": 101.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 26,
             "parent": -1,
@@ -254,7 +254,7 @@
             ]
         },
         {
-            "hierarchyOrder": 103.0,
+            "hierarchyOrder": 102.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 27,
             "parent": -1,
@@ -272,7 +272,7 @@
             ]
         },
         {
-            "hierarchyOrder": 94.0,
+            "hierarchyOrder": 93.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 28,
             "parent": -1,
@@ -290,7 +290,7 @@
             ]
         },
         {
-            "hierarchyOrder": 101.0,
+            "hierarchyOrder": 100.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 29,
             "parent": -1,
@@ -308,7 +308,7 @@
             ]
         },
         {
-            "hierarchyOrder": 96.0,
+            "hierarchyOrder": 95.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 30,
             "parent": -1,
@@ -326,7 +326,7 @@
             ]
         },
         {
-            "hierarchyOrder": 99.0,
+            "hierarchyOrder": 98.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 31,
             "parent": -1,
@@ -344,7 +344,7 @@
             ]
         },
         {
-            "hierarchyOrder": 98.0,
+            "hierarchyOrder": 97.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 32,
             "parent": -1,
@@ -362,7 +362,7 @@
             ]
         },
         {
-            "hierarchyOrder": 97.0,
+            "hierarchyOrder": 96.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 33,
             "parent": -1,
@@ -380,7 +380,7 @@
             ]
         },
         {
-            "hierarchyOrder": 92.0,
+            "hierarchyOrder": 91.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 34,
             "parent": -1,
@@ -398,7 +398,7 @@
             ]
         },
         {
-            "hierarchyOrder": 93.0,
+            "hierarchyOrder": 92.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 35,
             "parent": -1,
@@ -416,7 +416,7 @@
             ]
         },
         {
-            "hierarchyOrder": 95.0,
+            "hierarchyOrder": 94.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 36,
             "parent": -1,
@@ -434,7 +434,7 @@
             ]
         },
         {
-            "hierarchyOrder": 91.0,
+            "hierarchyOrder": 90.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 37,
             "parent": -1,
@@ -452,7 +452,7 @@
             ]
         },
         {
-            "hierarchyOrder": 88.0,
+            "hierarchyOrder": 87.0,
             "name": "Fence Wood Medium 01",
             "uniqueNumber": 38,
             "parent": -1,
@@ -470,7 +470,7 @@
             ]
         },
         {
-            "hierarchyOrder": 90.0,
+            "hierarchyOrder": 89.0,
             "name": "Tree 1",
             "uniqueNumber": 40,
             "parent": -1,
@@ -488,7 +488,7 @@
             ]
         },
         {
-            "hierarchyOrder": 89.0,
+            "hierarchyOrder": 88.0,
             "name": "Store",
             "uniqueNumber": 41,
             "parent": -1,
@@ -506,7 +506,7 @@
             ]
         },
         {
-            "hierarchyOrder": 84.0,
+            "hierarchyOrder": 83.0,
             "name": "Dirt2",
             "uniqueNumber": 44,
             "parent": -1,
@@ -524,7 +524,7 @@
             ]
         },
         {
-            "hierarchyOrder": 85.0,
+            "hierarchyOrder": 84.0,
             "name": "Dirt3",
             "uniqueNumber": 45,
             "parent": -1,
@@ -542,7 +542,7 @@
             ]
         },
         {
-            "hierarchyOrder": 83.0,
+            "hierarchyOrder": 82.0,
             "name": "Dirt1",
             "uniqueNumber": 46,
             "parent": -1,
@@ -560,7 +560,7 @@
             ]
         },
         {
-            "hierarchyOrder": 86.0,
+            "hierarchyOrder": 85.0,
             "name": "Dirt5",
             "uniqueNumber": 47,
             "parent": -1,
@@ -578,7 +578,7 @@
             ]
         },
         {
-            "hierarchyOrder": 87.0,
+            "hierarchyOrder": 86.0,
             "name": "Dirt6",
             "uniqueNumber": 48,
             "parent": -1,
@@ -596,7 +596,7 @@
             ]
         },
         {
-            "hierarchyOrder": 82.0,
+            "hierarchyOrder": 81.0,
             "name": "Dirt4",
             "uniqueNumber": 49,
             "parent": -1,
@@ -614,7 +614,7 @@
             ]
         },
         {
-            "hierarchyOrder": 80.0,
+            "hierarchyOrder": 79.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 50,
             "parent": -1,
@@ -632,7 +632,7 @@
             ]
         },
         {
-            "hierarchyOrder": 81.0,
+            "hierarchyOrder": 80.0,
             "name": "Tree Sycamore 03",
             "uniqueNumber": 51,
             "parent": -1,
@@ -650,7 +650,7 @@
             ]
         },
         {
-            "hierarchyOrder": 79.0,
+            "hierarchyOrder": 78.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 52,
             "parent": -1,
@@ -668,7 +668,7 @@
             ]
         },
         {
-            "hierarchyOrder": 78.0,
+            "hierarchyOrder": 77.0,
             "name": "Tree 2",
             "uniqueNumber": 54,
             "parent": -1,
@@ -686,7 +686,7 @@
             ]
         },
         {
-            "hierarchyOrder": 77.0,
+            "hierarchyOrder": 76.0,
             "name": "Well",
             "uniqueNumber": 55,
             "parent": -1,
@@ -704,7 +704,7 @@
             ]
         },
         {
-            "hierarchyOrder": 76.0,
+            "hierarchyOrder": 75.0,
             "name": "Logs 2",
             "uniqueNumber": 56,
             "parent": -1,
@@ -722,7 +722,7 @@
             ]
         },
         {
-            "hierarchyOrder": 75.0,
+            "hierarchyOrder": 74.0,
             "name": "Axe 2",
             "uniqueNumber": 57,
             "parent": -1,
@@ -740,7 +740,7 @@
             ]
         },
         {
-            "hierarchyOrder": 74.0,
+            "hierarchyOrder": 73.0,
             "name": "Outdoor Box Lamp",
             "uniqueNumber": 59,
             "parent": -1,
@@ -758,7 +758,7 @@
             ]
         },
         {
-            "hierarchyOrder": 72.0,
+            "hierarchyOrder": 71.0,
             "name": "Window 2x2 V2 Closed",
             "uniqueNumber": 60,
             "parent": -1,
@@ -776,7 +776,7 @@
             ]
         },
         {
-            "hierarchyOrder": 69.0,
+            "hierarchyOrder": 68.0,
             "name": "Window 2x2 V2 Closed",
             "uniqueNumber": 61,
             "parent": -1,
@@ -794,7 +794,7 @@
             ]
         },
         {
-            "hierarchyOrder": 73.0,
+            "hierarchyOrder": 72.0,
             "name": "Window 2x2 V2 Closed",
             "uniqueNumber": 62,
             "parent": -1,
@@ -812,7 +812,7 @@
             ]
         },
         {
-            "hierarchyOrder": 71.0,
+            "hierarchyOrder": 70.0,
             "name": "Window 2x2 V2 Closed",
             "uniqueNumber": 63,
             "parent": -1,
@@ -830,7 +830,7 @@
             ]
         },
         {
-            "hierarchyOrder": 70.0,
+            "hierarchyOrder": 69.0,
             "name": "Shovel",
             "uniqueNumber": 64,
             "parent": -1,
@@ -848,7 +848,7 @@
             ]
         },
         {
-            "hierarchyOrder": 67.0,
+            "hierarchyOrder": 66.0,
             "name": "Window 2x2 V2 Closed",
             "uniqueNumber": 65,
             "parent": -1,
@@ -866,7 +866,7 @@
             ]
         },
         {
-            "hierarchyOrder": 68.0,
+            "hierarchyOrder": 67.0,
             "name": "Flower 01",
             "uniqueNumber": 66,
             "parent": -1,
@@ -884,7 +884,7 @@
             ]
         },
         {
-            "hierarchyOrder": 66.0,
+            "hierarchyOrder": 65.0,
             "name": "Flower 01",
             "uniqueNumber": 67,
             "parent": -1,
@@ -902,7 +902,7 @@
             ]
         },
         {
-            "hierarchyOrder": 65.0,
+            "hierarchyOrder": 64.0,
             "name": "Rock Big 07",
             "uniqueNumber": 72,
             "parent": -1,
@@ -920,7 +920,7 @@
             ]
         },
         {
-            "hierarchyOrder": 63.0,
+            "hierarchyOrder": 62.0,
             "name": "Rock Big 07",
             "uniqueNumber": 73,
             "parent": -1,
@@ -938,7 +938,7 @@
             ]
         },
         {
-            "hierarchyOrder": 64.0,
+            "hierarchyOrder": 63.0,
             "name": "Pond",
             "uniqueNumber": 74,
             "parent": -1,
@@ -956,7 +956,7 @@
             ]
         },
         {
-            "hierarchyOrder": 62.0,
+            "hierarchyOrder": 61.0,
             "name": "Rock Big 07",
             "uniqueNumber": 75,
             "parent": -1,
@@ -974,7 +974,7 @@
             ]
         },
         {
-            "hierarchyOrder": 58.0,
+            "hierarchyOrder": 57.0,
             "name": "Stone Slab Small 02",
             "uniqueNumber": 76,
             "parent": -1,
@@ -992,7 +992,7 @@
             ]
         },
         {
-            "hierarchyOrder": 61.0,
+            "hierarchyOrder": 60.0,
             "name": "Well Bucket2",
             "uniqueNumber": 77,
             "parent": -1,
@@ -1010,7 +1010,7 @@
             ]
         },
         {
-            "hierarchyOrder": 60.0,
+            "hierarchyOrder": 59.0,
             "name": "Well Bucket3",
             "uniqueNumber": 78,
             "parent": -1,
@@ -1028,7 +1028,7 @@
             ]
         },
         {
-            "hierarchyOrder": 59.0,
+            "hierarchyOrder": 58.0,
             "name": "Well Bucket1",
             "uniqueNumber": 79,
             "parent": -1,
@@ -1046,7 +1046,7 @@
             ]
         },
         {
-            "hierarchyOrder": 113.0,
+            "hierarchyOrder": 112.0,
             "name": "Floor Base Grass 01",
             "uniqueNumber": 8,
             "parent": -1,
@@ -1064,7 +1064,7 @@
             ]
         },
         {
-            "hierarchyOrder": 57.0,
+            "hierarchyOrder": 56.0,
             "name": "Sign Garden",
             "uniqueNumber": 111,
             "parent": -1,
@@ -1082,7 +1082,7 @@
             ]
         },
         {
-            "hierarchyOrder": 56.0,
+            "hierarchyOrder": 55.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 114,
             "parent": -1,
@@ -1100,7 +1100,7 @@
             ]
         },
         {
-            "hierarchyOrder": 55.0,
+            "hierarchyOrder": 54.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 115,
             "parent": -1,
@@ -1118,7 +1118,7 @@
             ]
         },
         {
-            "hierarchyOrder": 54.0,
+            "hierarchyOrder": 53.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 116,
             "parent": -1,
@@ -1136,7 +1136,7 @@
             ]
         },
         {
-            "hierarchyOrder": 53.0,
+            "hierarchyOrder": 52.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 117,
             "parent": -1,
@@ -1154,7 +1154,7 @@
             ]
         },
         {
-            "hierarchyOrder": 51.0,
+            "hierarchyOrder": 50.0,
             "name": "Window 2x2 V2 Closed",
             "uniqueNumber": 121,
             "parent": -1,
@@ -1172,7 +1172,7 @@
             ]
         },
         {
-            "hierarchyOrder": 52.0,
+            "hierarchyOrder": 51.0,
             "name": "Outdoor Box Lamp",
             "uniqueNumber": 124,
             "parent": -1,
@@ -1190,7 +1190,7 @@
             ]
         },
         {
-            "hierarchyOrder": 50.0,
+            "hierarchyOrder": 49.0,
             "name": "couch",
             "uniqueNumber": 126,
             "parent": -1,
@@ -1208,7 +1208,7 @@
             ]
         },
         {
-            "hierarchyOrder": 49.0,
+            "hierarchyOrder": 48.0,
             "name": "bed",
             "uniqueNumber": 136,
             "parent": -1,
@@ -1226,7 +1226,7 @@
             ]
         },
         {
-            "hierarchyOrder": 48.0,
+            "hierarchyOrder": 47.0,
             "name": "Chest",
             "uniqueNumber": 138,
             "parent": -1,
@@ -1244,7 +1244,7 @@
             ]
         },
         {
-            "hierarchyOrder": 47.0,
+            "hierarchyOrder": 46.0,
             "name": "Door",
             "uniqueNumber": 154,
             "parent": -1,
@@ -1262,7 +1262,7 @@
             ]
         },
         {
-            "hierarchyOrder": 46.0,
+            "hierarchyOrder": 45.0,
             "name": "Tree Sycamore 03",
             "uniqueNumber": 157,
             "parent": -1,
@@ -1271,7 +1271,7 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":11.25,\"y\":0.0,\"z\":26.75},\"rot\":{\"x\":0.0,\"y\":0.9914448857307434,\"z\":0.0,\"w\":0.13052625954151154},\"scale\":{\"x\":1.5,\"y\":1.5,\"z\":1.5}}"
+                    "specifics": "{\"pos\":{\"x\":8.25,\"y\":0.0,\"z\":27.75},\"rot\":{\"x\":0.0,\"y\":0.9914448857307434,\"z\":0.0,\"w\":0.13052625954151154},\"scale\":{\"x\":1.5,\"y\":1.5,\"z\":1.5}}"
                 },
                 {
                     "name": "GLTFShape",
@@ -1280,7 +1280,7 @@
             ]
         },
         {
-            "hierarchyOrder": 45.0,
+            "hierarchyOrder": 44.0,
             "name": "Tree Sycamore 03",
             "uniqueNumber": 158,
             "parent": -1,
@@ -1289,7 +1289,7 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":5.75,\"y\":0.0,\"z\":18.5},\"rot\":{\"x\":0.0,\"y\":0.7933533787727356,\"z\":0.0,\"w\":-0.6087614893913269},\"scale\":{\"x\":1.5,\"y\":1.5,\"z\":1.5}}"
+                    "specifics": "{\"pos\":{\"x\":5.0,\"y\":0.0,\"z\":18.5},\"rot\":{\"x\":0.0,\"y\":0.7933533787727356,\"z\":0.0,\"w\":-0.6087614893913269},\"scale\":{\"x\":1.75,\"y\":1.75,\"z\":1.75}}"
                 },
                 {
                     "name": "GLTFShape",
@@ -1298,7 +1298,7 @@
             ]
         },
         {
-            "hierarchyOrder": 42.0,
+            "hierarchyOrder": 41.0,
             "name": "Tree Sycamore 03",
             "uniqueNumber": 159,
             "parent": -1,
@@ -1316,7 +1316,7 @@
             ]
         },
         {
-            "hierarchyOrder": 44.0,
+            "hierarchyOrder": 43.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 160,
             "parent": -1,
@@ -1325,7 +1325,7 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":9.0,\"y\":0.0,\"z\":30.25},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.5,\"y\":1.5,\"z\":1.5}}"
+                    "specifics": "{\"pos\":{\"x\":10.75,\"y\":0.0,\"z\":30.25},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.5,\"y\":1.5,\"z\":1.5}}"
                 },
                 {
                     "name": "GLTFShape",
@@ -1334,7 +1334,7 @@
             ]
         },
         {
-            "hierarchyOrder": 41.0,
+            "hierarchyOrder": 40.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 161,
             "parent": -1,
@@ -1352,7 +1352,7 @@
             ]
         },
         {
-            "hierarchyOrder": 40.0,
+            "hierarchyOrder": 39.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 162,
             "parent": -1,
@@ -1370,7 +1370,7 @@
             ]
         },
         {
-            "hierarchyOrder": 38.0,
+            "hierarchyOrder": 37.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 163,
             "parent": -1,
@@ -1388,7 +1388,7 @@
             ]
         },
         {
-            "hierarchyOrder": 43.0,
+            "hierarchyOrder": 42.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 165,
             "parent": -1,
@@ -1406,7 +1406,7 @@
             ]
         },
         {
-            "hierarchyOrder": 39.0,
+            "hierarchyOrder": 38.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 166,
             "parent": -1,
@@ -1424,7 +1424,7 @@
             ]
         },
         {
-            "hierarchyOrder": 37.0,
+            "hierarchyOrder": 36.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 168,
             "parent": -1,
@@ -1433,7 +1433,7 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":9.5,\"y\":0.0,\"z\":16.25},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.5,\"y\":1.5,\"z\":1.5}}"
+                    "specifics": "{\"pos\":{\"x\":9.0,\"y\":0.0,\"z\":19.0},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.5,\"y\":1.5,\"z\":1.5}}"
                 },
                 {
                     "name": "GLTFShape",
@@ -1442,7 +1442,7 @@
             ]
         },
         {
-            "hierarchyOrder": 35.0,
+            "hierarchyOrder": 34.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 169,
             "parent": -1,
@@ -1460,7 +1460,7 @@
             ]
         },
         {
-            "hierarchyOrder": 36.0,
+            "hierarchyOrder": 35.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 170,
             "parent": -1,
@@ -1469,7 +1469,7 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":7.75,\"y\":0.0,\"z\":22.75},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.75,\"y\":1.75,\"z\":1.75}}"
+                    "specifics": "{\"pos\":{\"x\":7.25,\"y\":0.0,\"z\":23.75},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.75,\"y\":1.75,\"z\":1.75}}"
                 },
                 {
                     "name": "GLTFShape",
@@ -1478,7 +1478,7 @@
             ]
         },
         {
-            "hierarchyOrder": 34.0,
+            "hierarchyOrder": 33.0,
             "name": "Chair 1",
             "uniqueNumber": 175,
             "parent": -1,
@@ -1496,7 +1496,7 @@
             ]
         },
         {
-            "hierarchyOrder": 33.0,
+            "hierarchyOrder": 32.0,
             "name": "Map 03",
             "uniqueNumber": 176,
             "parent": -1,
@@ -1514,7 +1514,7 @@
             ]
         },
         {
-            "hierarchyOrder": 32.0,
+            "hierarchyOrder": 31.0,
             "name": "Chair 1",
             "uniqueNumber": 179,
             "parent": -1,
@@ -1532,7 +1532,7 @@
             ]
         },
         {
-            "hierarchyOrder": 30.0,
+            "hierarchyOrder": 29.0,
             "name": "Gem1",
             "uniqueNumber": 180,
             "parent": -1,
@@ -1550,7 +1550,7 @@
             ]
         },
         {
-            "hierarchyOrder": 31.0,
+            "hierarchyOrder": 30.0,
             "name": "Gem3",
             "uniqueNumber": 181,
             "parent": -1,
@@ -1568,7 +1568,7 @@
             ]
         },
         {
-            "hierarchyOrder": 29.0,
+            "hierarchyOrder": 28.0,
             "name": "Gem5",
             "uniqueNumber": 184,
             "parent": -1,
@@ -1586,7 +1586,7 @@
             ]
         },
         {
-            "hierarchyOrder": 28.0,
+            "hierarchyOrder": 27.0,
             "name": "Gem4",
             "uniqueNumber": 185,
             "parent": -1,
@@ -1604,7 +1604,7 @@
             ]
         },
         {
-            "hierarchyOrder": 27.0,
+            "hierarchyOrder": 26.0,
             "name": "Carpet 02",
             "uniqueNumber": 187,
             "parent": -1,
@@ -1622,7 +1622,7 @@
             ]
         },
         {
-            "hierarchyOrder": 25.0,
+            "hierarchyOrder": 24.0,
             "name": "Table 4",
             "uniqueNumber": 188,
             "parent": -1,
@@ -1640,7 +1640,7 @@
             ]
         },
         {
-            "hierarchyOrder": 26.0,
+            "hierarchyOrder": 25.0,
             "name": "Bench 4",
             "uniqueNumber": 189,
             "parent": -1,
@@ -1658,7 +1658,7 @@
             ]
         },
         {
-            "hierarchyOrder": 24.0,
+            "hierarchyOrder": 23.0,
             "name": "Vase 1",
             "uniqueNumber": 190,
             "parent": -1,
@@ -1676,7 +1676,7 @@
             ]
         },
         {
-            "hierarchyOrder": 23.0,
+            "hierarchyOrder": 22.0,
             "name": "HWN20 Candle 02",
             "uniqueNumber": 191,
             "parent": -1,
@@ -1694,7 +1694,7 @@
             ]
         },
         {
-            "hierarchyOrder": 22.0,
+            "hierarchyOrder": 21.0,
             "name": "HWN20 Candle 02",
             "uniqueNumber": 192,
             "parent": -1,
@@ -1712,7 +1712,7 @@
             ]
         },
         {
-            "hierarchyOrder": 21.0,
+            "hierarchyOrder": 20.0,
             "name": "HWN20 Candle 02",
             "uniqueNumber": 193,
             "parent": -1,
@@ -1730,7 +1730,7 @@
             ]
         },
         {
-            "hierarchyOrder": 20.0,
+            "hierarchyOrder": 19.0,
             "name": "Flower 01",
             "uniqueNumber": 194,
             "parent": -1,
@@ -1748,7 +1748,7 @@
             ]
         },
         {
-            "hierarchyOrder": 19.0,
+            "hierarchyOrder": 18.0,
             "name": "Flower 01",
             "uniqueNumber": 197,
             "parent": -1,
@@ -1766,7 +1766,7 @@
             ]
         },
         {
-            "hierarchyOrder": 16.0,
+            "hierarchyOrder": 15.0,
             "name": "Flower 01",
             "uniqueNumber": 198,
             "parent": -1,
@@ -1784,7 +1784,7 @@
             ]
         },
         {
-            "hierarchyOrder": 18.0,
+            "hierarchyOrder": 17.0,
             "name": "Gem2",
             "uniqueNumber": 200,
             "parent": -1,
@@ -1802,7 +1802,7 @@
             ]
         },
         {
-            "hierarchyOrder": 17.0,
+            "hierarchyOrder": 16.0,
             "name": "Table 4",
             "uniqueNumber": 201,
             "parent": -1,
@@ -1820,7 +1820,7 @@
             ]
         },
         {
-            "hierarchyOrder": 15.0,
+            "hierarchyOrder": 14.0,
             "name": "Map 03",
             "uniqueNumber": 202,
             "parent": -1,
@@ -1838,7 +1838,7 @@
             ]
         },
         {
-            "hierarchyOrder": 14.0,
+            "hierarchyOrder": 13.0,
             "name": "Vase 1",
             "uniqueNumber": 203,
             "parent": -1,
@@ -1856,7 +1856,7 @@
             ]
         },
         {
-            "hierarchyOrder": 11.0,
+            "hierarchyOrder": 10.0,
             "name": "Plant 03",
             "uniqueNumber": 204,
             "parent": -1,
@@ -1874,7 +1874,7 @@
             ]
         },
         {
-            "hierarchyOrder": 13.0,
+            "hierarchyOrder": 12.0,
             "name": "Plant 03",
             "uniqueNumber": 205,
             "parent": -1,
@@ -1892,7 +1892,7 @@
             ]
         },
         {
-            "hierarchyOrder": 12.0,
+            "hierarchyOrder": 11.0,
             "name": "Bench 4",
             "uniqueNumber": 206,
             "parent": -1,
@@ -1910,7 +1910,7 @@
             ]
         },
         {
-            "hierarchyOrder": 10.0,
+            "hierarchyOrder": 9.0,
             "name": "candle",
             "uniqueNumber": 207,
             "parent": -1,
@@ -1928,7 +1928,7 @@
             ]
         },
         {
-            "hierarchyOrder": 8.0,
+            "hierarchyOrder": 7.0,
             "name": "HWN20 Candle 02",
             "uniqueNumber": 208,
             "parent": -1,
@@ -1946,7 +1946,7 @@
             ]
         },
         {
-            "hierarchyOrder": 7.0,
+            "hierarchyOrder": 6.0,
             "name": "Lily Pad 01",
             "uniqueNumber": 211,
             "parent": -1,
@@ -1964,7 +1964,7 @@
             ]
         },
         {
-            "hierarchyOrder": 6.0,
+            "hierarchyOrder": 5.0,
             "name": "Lily Pad 01",
             "uniqueNumber": 212,
             "parent": -1,
@@ -1982,7 +1982,7 @@
             ]
         },
         {
-            "hierarchyOrder": 9.0,
+            "hierarchyOrder": 8.0,
             "name": "Lily Pad 01",
             "uniqueNumber": 213,
             "parent": -1,
@@ -2000,8 +2000,8 @@
             ]
         },
         {
-            "hierarchyOrder": 5.0,
-            "name": "Mushroom 1",
+            "hierarchyOrder": 4.0,
+            "name": "Mushroom Pink 1",
             "uniqueNumber": 214,
             "parent": -1,
             "exposed": true,
@@ -2009,7 +2009,7 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":7.0,\"y\":0.0,\"z\":23.25},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
+                    "specifics": "{\"pos\":{\"x\":6.5,\"y\":0.0,\"z\":24.0},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.5,\"y\":1.5,\"z\":1.5}}"
                 },
                 {
                     "name": "GLTFShape",
@@ -2018,7 +2018,7 @@
             ]
         },
         {
-            "hierarchyOrder": 2.0,
+            "hierarchyOrder": 0.0,
             "name": "Cart Big Closed",
             "uniqueNumber": 216,
             "parent": -1,
@@ -2036,7 +2036,43 @@
             ]
         },
         {
-            "hierarchyOrder": 4.0,
+            "hierarchyOrder": 3.0,
+            "name": "Tree Fir 02",
+            "uniqueNumber": 218,
+            "parent": -1,
+            "exposed": false,
+            "collapsedChildren": false,
+            "components": [
+                {
+                    "name": "transform",
+                    "specifics": "{\"pos\":{\"x\":9.25,\"y\":0.0,\"z\":14.75},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.5,\"y\":1.5,\"z\":1.5}}"
+                },
+                {
+                    "name": "GLTFShape",
+                    "specifics": "{\"assetID\":\"63af8baa-d211-49fa-9950-6f625c6129b3\"}"
+                }
+            ]
+        },
+        {
+            "hierarchyOrder": 2.0,
+            "name": "Cube Entity",
+            "uniqueNumber": 219,
+            "parent": -1,
+            "exposed": false,
+            "collapsedChildren": false,
+            "components": [
+                {
+                    "name": "transform",
+                    "specifics": "{\"pos\":{\"x\":5.25,\"y\":2.0,\"z\":27.25},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":1.0,\"y\":4.25,\"z\":1.0}}"
+                },
+                {
+                    "name": "boxShape",
+                    "specifics": ""
+                }
+            ]
+        },
+        {
+            "hierarchyOrder": 1.0,
             "name": "Tree Fir 02",
             "uniqueNumber": 220,
             "parent": -1,
@@ -2050,60 +2086,6 @@
                 {
                     "name": "GLTFShape",
                     "specifics": "{\"assetID\":\"63af8baa-d211-49fa-9950-6f625c6129b3\"}"
-                }
-            ]
-        },
-        {
-            "hierarchyOrder": 3.0,
-            "name": "Mushroom 3",
-            "uniqueNumber": 221,
-            "parent": -1,
-            "exposed": true,
-            "collapsedChildren": false,
-            "components": [
-                {
-                    "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":9.25,\"y\":0.0,\"z\":29.5},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
-                },
-                {
-                    "name": "GLTFShape",
-                    "specifics": "{\"assetID\":\"25325769-22d1-4db2-bfc3-ee567608fc6b\"}"
-                }
-            ]
-        },
-        {
-            "hierarchyOrder": 1.0,
-            "name": "Mushroom 4",
-            "uniqueNumber": 222,
-            "parent": -1,
-            "exposed": true,
-            "collapsedChildren": false,
-            "components": [
-                {
-                    "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":9.25,\"y\":0.0,\"z\":17.0},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
-                },
-                {
-                    "name": "GLTFShape",
-                    "specifics": "{\"assetID\":\"25325769-22d1-4db2-bfc3-ee567608fc6b\"}"
-                }
-            ]
-        },
-        {
-            "hierarchyOrder": 0.0,
-            "name": "Mushroom 2",
-            "uniqueNumber": 223,
-            "parent": -1,
-            "exposed": true,
-            "collapsedChildren": false,
-            "components": [
-                {
-                    "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":15.75,\"y\":0.0,\"z\":28.5},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
-                },
-                {
-                    "name": "GLTFShape",
-                    "specifics": "{\"assetID\":\"25325769-22d1-4db2-bfc3-ee567608fc6b\"}"
                 }
             ]
         }

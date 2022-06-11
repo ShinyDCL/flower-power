@@ -334,16 +334,6 @@
             "name": "Wood 2",
             "id": "09012ef0-dfbb-4194-85a6-b8aa60d68564",
             "gltfPath": "models/plank/Wood 2.glb"
-        },
-        {
-            "name": "lift",
-            "id": "ed8f0a80-0db0-4f4f-8d85-00513d3f0392",
-            "gltfPath": "models/platform/lift.glb"
-        },
-        {
-            "name": "Platform",
-            "id": "bef882a5-ae77-4b5f-9c60-a1cd8d73556c",
-            "gltfPath": "models/platform/Platform.glb"
         }
     ]
 }
