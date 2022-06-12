@@ -61,22 +61,22 @@ const ITEM_ICONS: { [key in Item]: ImageSection } = {
   },
   [Item.ROSE]: {
     ...iconSize,
-    sourceLeft: 700,
+    sourceLeft: 701,
     sourceTop: 200,
   },
   [Item.TULIP]: {
     ...iconSize,
-    sourceLeft: 700,
+    sourceLeft: 701,
     sourceTop: 100,
   },
   [Item.SUNFLOWER]: {
     ...iconSize,
-    sourceLeft: 700,
+    sourceLeft: 701,
     sourceTop: 0,
   },
   [Item.BEAN]: {
     ...iconSize,
-    sourceLeft: 700,
+    sourceLeft: 701,
     sourceTop: 300,
   },
   [Item.LEMON]: {
@@ -105,29 +105,29 @@ const CIRCLES = {
   pink: {
     ...circleSize,
     sourceLeft: 0,
-    sourceTop: 500,
+    sourceTop: 501,
   },
   blue: {
     ...circleSize,
-    sourceLeft: 1000,
-    sourceTop: 200,
+    sourceLeft: 200,
+    sourceTop: 501,
   },
   yellow: {
     ...circleSize,
-    sourceLeft: 1000,
-    sourceTop: 400,
+    sourceLeft: 400,
+    sourceTop: 501,
   },
   green: {
     ...circleSize,
-    sourceLeft: 1000,
-    sourceTop: 600,
+    sourceLeft: 600,
+    sourceTop: 501,
   },
 };
 
 const INVENTORY = {
   gem: {
     ...iconSize,
-    sourceLeft: 700,
+    sourceLeft: 701,
     sourceTop: 400,
   },
   background: {
