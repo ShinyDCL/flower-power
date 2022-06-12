@@ -3,6 +3,7 @@ import { setUpHouse } from './house/house';
 import { setUpGarden } from './garden/garden';
 import { setUpPond } from './pond/pond';
 import { inventory } from './state';
+import { setUpForest } from './forest/forest';
 
 // Add starter seeds to inventory
 inventory.addItem(Item.ROSE_SEED, 3);
@@ -11,3 +12,4 @@ inventory.addItem(Item.ROSE_SEED, 3);
 setUpGarden();
 setUpHouse();
 setUpPond();
+setUpForest();
