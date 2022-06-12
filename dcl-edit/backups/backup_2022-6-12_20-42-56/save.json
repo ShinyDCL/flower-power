@@ -2127,7 +2127,7 @@
         },
         {
             "hierarchyOrder": 1.0,
-            "name": "Mushroom 2",
+            "name": "mushroom2",
             "uniqueNumber": 229,
             "parent": -1,
             "exposed": true,
@@ -2145,10 +2145,10 @@
         },
         {
             "hierarchyOrder": 0.0,
-            "name": "Mushroom 4",
+            "name": "Mushrooms 01",
             "uniqueNumber": 230,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {

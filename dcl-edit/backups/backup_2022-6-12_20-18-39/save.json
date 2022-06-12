@@ -1,5 +1,5 @@
 {
-    "entityNumberCounter": 231,
+    "entityNumberCounter": 228,
     "entities": [
         {
             "hierarchyOrder": 118.0,
@@ -1991,7 +1991,7 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":6.75,\"y\":0.0,\"z\":23.25},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":3.0,\"y\":3.0,\"z\":3.0}}"
+                    "specifics": "{\"pos\":{\"x\":7.0,\"y\":0.0,\"z\":23.25},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
                 },
                 {
                     "name": "GLTFShape",
@@ -2045,7 +2045,43 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":9.25,\"y\":0.0,\"z\":29.5},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":3.0,\"y\":3.0,\"z\":3.0}}"
+                    "specifics": "{\"pos\":{\"x\":9.25,\"y\":0.0,\"z\":29.5},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
+                },
+                {
+                    "name": "GLTFShape",
+                    "specifics": "{\"assetID\":\"25325769-22d1-4db2-bfc3-ee567608fc6b\"}"
+                }
+            ]
+        },
+        {
+            "hierarchyOrder": 4.0,
+            "name": "Mushroom 4",
+            "uniqueNumber": 222,
+            "parent": -1,
+            "exposed": true,
+            "collapsedChildren": false,
+            "components": [
+                {
+                    "name": "transform",
+                    "specifics": "{\"pos\":{\"x\":9.25,\"y\":0.0,\"z\":17.0},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
+                },
+                {
+                    "name": "GLTFShape",
+                    "specifics": "{\"assetID\":\"25325769-22d1-4db2-bfc3-ee567608fc6b\"}"
+                }
+            ]
+        },
+        {
+            "hierarchyOrder": 3.0,
+            "name": "Mushroom 2",
+            "uniqueNumber": 223,
+            "parent": -1,
+            "exposed": true,
+            "collapsedChildren": false,
+            "components": [
+                {
+                    "name": "transform",
+                    "specifics": "{\"pos\":{\"x\":15.75,\"y\":0.0,\"z\":28.5},\"rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":2.0,\"y\":2.0,\"z\":2.0}}"
                 },
                 {
                     "name": "GLTFShape",
@@ -2072,7 +2108,7 @@
             ]
         },
         {
-            "hierarchyOrder": 4.0,
+            "hierarchyOrder": 2.0,
             "name": "Sign Garden",
             "uniqueNumber": 225,
             "parent": -1,
@@ -2081,7 +2117,7 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":14.25,\"y\":0.0,\"z\":14.5},\"rot\":{\"x\":0.0,\"y\":0.8660253882408142,\"z\":0.0,\"w\":0.5000001192092896},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
+                    "specifics": "{\"pos\":{\"x\":14.0,\"y\":0.0,\"z\":14.5},\"rot\":{\"x\":0.0,\"y\":0.8660253882408142,\"z\":0.0,\"w\":0.5000001192092896},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
                 },
                 {
                     "name": "GLTFShape",
@@ -2090,7 +2126,7 @@
             ]
         },
         {
-            "hierarchyOrder": 2.0,
+            "hierarchyOrder": 0.0,
             "name": "Sign Garden",
             "uniqueNumber": 226,
             "parent": -1,
@@ -2099,25 +2135,7 @@
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":23.75,\"y\":0.0,\"z\":15.25},\"rot\":{\"x\":0.0,\"y\":0.7933533787727356,\"z\":0.0,\"w\":-0.6087614893913269},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
-                },
-                {
-                    "name": "GLTFShape",
-                    "specifics": "{\"assetID\":\"b640ceb9-0bae-49d2-b19c-578202f0c752\"}"
-                }
-            ]
-        },
-        {
-            "hierarchyOrder": 3.0,
-            "name": "Sign Garden",
-            "uniqueNumber": 227,
-            "parent": -1,
-            "exposed": false,
-            "collapsedChildren": false,
-            "components": [
-                {
-                    "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":21.25,\"y\":0.0,\"z\":7.75},\"rot\":{\"x\":0.0,\"y\":0.9659258723258972,\"z\":0.0,\"w\":-0.258819043636322},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
+                    "specifics": "{\"pos\":{\"x\":23.75,\"y\":0.0,\"z\":15.0},\"rot\":{\"x\":0.0,\"y\":0.8660253882408142,\"z\":0.0,\"w\":-0.5000001192092896},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
                 },
                 {
                     "name": "GLTFShape",
@@ -2127,37 +2145,19 @@
         },
         {
             "hierarchyOrder": 1.0,
-            "name": "Mushroom 2",
-            "uniqueNumber": 229,
+            "name": "Sign Garden",
+            "uniqueNumber": 227,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {
                     "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":15.75,\"y\":0.0,\"z\":28.25},\"rot\":{\"x\":0.0,\"y\":0.5000001192092896,\"z\":0.0,\"w\":0.8660253882408142},\"scale\":{\"x\":3.0,\"y\":3.0,\"z\":3.0}}"
+                    "specifics": "{\"pos\":{\"x\":20.5,\"y\":0.0,\"z\":2.5},\"rot\":{\"x\":0.0,\"y\":0.38268357515335085,\"z\":0.0,\"w\":-0.9238795042037964},\"scale\":{\"x\":1.0,\"y\":1.0,\"z\":1.0}}"
                 },
                 {
                     "name": "GLTFShape",
-                    "specifics": "{\"assetID\":\"f258bfff-8653-4ae0-860b-cae910c2083c\"}"
-                }
-            ]
-        },
-        {
-            "hierarchyOrder": 0.0,
-            "name": "Mushroom 4",
-            "uniqueNumber": 230,
-            "parent": -1,
-            "exposed": true,
-            "collapsedChildren": false,
-            "components": [
-                {
-                    "name": "transform",
-                    "specifics": "{\"pos\":{\"x\":9.0,\"y\":0.0,\"z\":16.75},\"rot\":{\"x\":0.0,\"y\":4.470348002882929e-8,\"z\":0.0,\"w\":1.0},\"scale\":{\"x\":3.0,\"y\":3.0,\"z\":3.0}}"
-                },
-                {
-                    "name": "GLTFShape",
-                    "specifics": "{\"assetID\":\"f258bfff-8653-4ae0-860b-cae910c2083c\"}"
+                    "specifics": "{\"assetID\":\"b640ceb9-0bae-49d2-b19c-578202f0c752\"}"
                 }
             ]
         }

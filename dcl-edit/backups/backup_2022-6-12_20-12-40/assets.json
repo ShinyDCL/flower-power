@@ -344,11 +344,6 @@
             "name": "Platform",
             "id": "bef882a5-ae77-4b5f-9c60-a1cd8d73556c",
             "gltfPath": "models/platform/Platform.glb"
-        },
-        {
-            "name": "Sign Post wood",
-            "id": "abfa8b51-2d46-499c-bae3-025b754f505f",
-            "gltfPath": "models/sign/SignPost_wood.glb"
         }
     ]
 }
