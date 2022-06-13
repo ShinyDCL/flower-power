@@ -1,14 +1,14 @@
 {
   "display": {
-    "title": "DCL Scene",
-    "description": "My new Decentraland project",
+    "title": "Flower Power",
+    "description": "Decentraland Flower Power game",
     "navmapThumbnail": "images/scene-thumbnail.png",
     "favicon": "favicon_asset"
   },
   "owner": "",
   "contact": {
-    "name": "author-name",
-    "email": ""
+    "name": "Shiny",
+    "email": "citrons915@gmail.com"
   },
   "main": "bin/game.js",
   "tags": [],
@@ -26,7 +26,7 @@
       "name": "spawn1",
       "default": true,
       "position": {
-        "x": 0,
+        "x": 16,
         "y": 0,
         "z": 0
       },
