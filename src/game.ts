@@ -7,8 +7,9 @@ import { Inventory } from './common/inventory';
 
 Inventory.renderInventorySidebar();
 
-// Add starter seeds to inventory
+// Add starter seeds and coins to inventory
 Inventory.addItem(Item.ROSE_SEED, 3);
+Inventory.addItem(Item.COINS, 10000);
 
 // Set up four scene areas
 setUpGarden();

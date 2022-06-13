@@ -19,6 +19,7 @@ export class Timer extends Entity {
   }
 
   public startCountDown(seconds: number): void {
+    this.getComponent(Transform).position.x = 0;
     this.getComponent(TextShape).visible = true;
     this.getComponent(TextShape).value = this.formatTimeString(seconds);
 

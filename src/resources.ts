@@ -25,7 +25,7 @@ const SOUNDS = {
   click: new AudioClip('sounds/Click.mp3'),
 };
 
-const IMAGE_TEXTURE = new Texture('images/inventory.png');
+const IMAGE_TEXTURE = new Texture('images/image-atlas.png');
 
 const iconSize = {
   sourceWidth: 100,

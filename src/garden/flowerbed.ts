@@ -157,6 +157,8 @@ export class Flowerbed extends Model {
     const time = GROW_TIMES[this.seed!];
     let endScale = new Vector3(1, 1, 1);
 
+    this.timer.startCountDown(time);
+
     switch (this.seed) {
       case Item.ROSE_SEED:
         this.flower.addComponentOrReplace(MODELS.rose);
@@ -187,6 +189,7 @@ export class Flowerbed extends Model {
         );
         break;
       case Item.BEAN_SEED:
+        this.timer.getComponent(Transform).position.x = -0.55;
         this.flower.addComponentOrReplace(MODELS.bean);
         this.flower.addComponentOrReplace(
           new Transform({
@@ -197,7 +200,6 @@ export class Flowerbed extends Model {
         break;
     }
 
-    this.timer.startCountDown(time);
     this.flower.addComponentOrReplace(
       new utils.ScaleTransformComponent(
         new Vector3(0, 0, 0),
