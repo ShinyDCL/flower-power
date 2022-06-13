@@ -1,7 +1,6 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import { movePlayerTo } from '@decentraland/RestrictedActions';
 import { MODELS } from 'src/resources';
-import { getShape } from 'src/utils';
 
 export class Platform extends Entity {
   private isMoving: boolean = false;
@@ -9,7 +8,7 @@ export class Platform extends Entity {
   constructor() {
     super();
 
-    this.addComponent(getShape(MODELS.platform, false, false, false));
+    this.addComponent(MODELS.platform);
     this.addComponent(
       new Transform({
         position: new Vector3(5.75, -2.2, 27.25),

@@ -3,10 +3,7 @@ import * as ui from '@dcl/ui-scene-utils';
 import { Inventory } from 'src/common/inventory';
 import { ACTIONS, GROUND_LEVEL, Item } from 'src/constants';
 import { MODELS, SOUNDS } from 'src/resources';
-import { getRandomDecimal, getRandomIntInclusive, getShape } from 'src/utils';
-
-const redFishShape = getShape(MODELS.fishRed, true, true, true);
-const greenFishShape = getShape(MODELS.fishGreen, true, true, true);
+import { getRandomDecimal, getRandomIntInclusive } from 'src/utils';
 
 export class Fish extends Entity {
   private parent: Entity;
@@ -54,9 +51,9 @@ export class Fish extends Entity {
 
     // Randomize fish type
     this.addComponentOrReplace(
-      getRandomIntInclusive(1, 2) === 1 ? redFishShape : greenFishShape
+      getRandomIntInclusive(1, 2) === 1 ? MODELS.fishRed : MODELS.fishGreen
     );
-    this.getComponent(GLTFShape).visible = true;
+    //this.getComponent(GLTFShape).visible = true;
 
     // Move entity
     this.parent.addComponentOrReplace(
@@ -66,10 +63,10 @@ export class Fish extends Entity {
 
   private handleCatch() {
     const shape = this.getComponent(GLTFShape);
-    const fish = shape === redFishShape ? Item.RED_FISH : Item.GREEN_FISH;
+    const fish = shape === MODELS.fishRed ? Item.RED_FISH : Item.GREEN_FISH;
 
     Inventory.addItem(fish, 1);
-    shape.visible = false;
+    this.removeComponent(GLTFShape);
     this.getComponent(AudioSource).playOnce();
 
     ui.displayAnnouncement('Cought it!', 1, Color4.Yellow(), 40);

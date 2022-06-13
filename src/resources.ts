@@ -1,16 +1,16 @@
 import { Item } from './constants';
-import { ImageSection } from './utils';
+import { getShape, ImageSection } from './utils';
 
 const MODELS = {
-  sprout: 'models/sprout/Grass05.glb',
-  tulip: 'models/tulip/Plant_03.glb',
-  rose: 'models/rose/Flower_02.glb',
-  sunflower: 'models/sunflower/Flower_01.glb',
-  bean: 'models/bean/Vegetation_05.glb',
-  lemon: 'models/lemon/FoodLemon_01.glb',
-  fishRed: 'models/fishRed/Fish_02.glb',
-  fishGreen: 'models/fishGreen/Fish_03.glb',
-  platform: 'models/platform/Platform.glb',
+  sprout: getShape('models/sprout/Grass05.glb'),
+  tulip: getShape('models/tulip/Plant_03.glb'),
+  rose: getShape('models/rose/Flower_02.glb'),
+  sunflower: getShape('models/sunflower/Flower_01.glb'),
+  bean: getShape('models/bean/Vegetation_05.glb'),
+  lemon: getShape('models/lemon/FoodLemon_01.glb', true, true, true),
+  fishRed: getShape('models/fishRed/Fish_02.glb', true, true, true),
+  fishGreen: getShape('models/fishGreen/Fish_03.glb', true, true, true),
+  platform: getShape('models/platform/Platform.glb', false, false, false),
 };
 
 const SOUNDS = {

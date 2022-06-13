@@ -3,7 +3,7 @@ import { Inventory } from 'src/common/inventory';
 import { ACTIONS, Item } from 'src/constants';
 import { MODELS, SOUNDS } from 'src/resources';
 
-import { getRandomIntInclusive, getShape } from 'src/utils';
+import { getRandomIntInclusive } from 'src/utils';
 
 export class Lemon extends Entity {
   private readonly positions: Vector3[];
@@ -13,7 +13,6 @@ export class Lemon extends Entity {
 
     this.positions = positions;
     this.addComponentOrReplace(new AudioSource(SOUNDS.collect));
-    this.addComponentOrReplace(getShape(MODELS.lemon, true, true, true));
     this.addComponentOrReplace(new Transform());
     this.setParent(parent);
 
@@ -46,7 +45,7 @@ export class Lemon extends Entity {
   private handlePickUp() {
     Inventory.addItem(Item.LEMON, 1);
     this.getComponent(AudioSource).playOnce();
-    this.getComponent(GLTFShape).visible = false;
+    this.removeComponent(GLTFShape);
     this.removeComponent(OnPointerDown);
 
     const timeout = getRandomIntInclusive(10000, 20000);
@@ -57,6 +56,6 @@ export class Lemon extends Entity {
     const index = getRandomIntInclusive(0, this.positions.length - 1);
     const position = this.positions[index];
     this.getComponent(Transform).position = position.clone();
-    this.getComponent(GLTFShape).visible = true;
+    this.addComponentOrReplace(MODELS.lemon);
   }
 }

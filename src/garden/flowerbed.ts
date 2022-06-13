@@ -16,7 +16,7 @@ import { userState } from 'src/state';
 import { SeedPrompt } from 'src/ui/seedPrompt';
 import { SimplePrompt } from 'src/ui/simplePrompt';
 import { Timer } from 'src/ui/timer';
-import { getRandomIntInclusive, getShape } from 'src/utils';
+import { getRandomIntInclusive } from 'src/utils';
 
 export class Flowerbed extends Model {
   private readonly timer: Timer;
@@ -39,7 +39,6 @@ export class Flowerbed extends Model {
     this.timer.setParent(this.entity);
 
     this.sprout = new Entity();
-    this.sprout.addComponent(getShape(MODELS.sprout, true, false, false));
     this.sprout.addComponent(
       new Transform({
         position: new Vector3(0, 0.3, 0),
@@ -120,6 +119,7 @@ export class Flowerbed extends Model {
     const time = SPROUT_TIMES[this.seed!];
 
     this.timer.startCountDown(time);
+    this.sprout.addComponentOrReplace(MODELS.sprout);
     this.sprout.addComponentOrReplace(
       new utils.ScaleTransformComponent(
         new Vector3(0, 0, 0),
@@ -134,7 +134,6 @@ export class Flowerbed extends Model {
         }
       )
     );
-    this.sprout.getComponent(GLTFShape).visible = true;
   }
 
   private handleClickWater(): void {
@@ -160,7 +159,7 @@ export class Flowerbed extends Model {
 
     switch (this.seed) {
       case Item.ROSE_SEED:
-        this.flower.addComponentOrReplace(getShape(MODELS.rose));
+        this.flower.addComponentOrReplace(MODELS.rose);
         this.flower.addComponentOrReplace(
           new Transform({
             position: new Vector3(0.03, 0.6, 0.03),
@@ -170,7 +169,7 @@ export class Flowerbed extends Model {
         endScale = new Vector3(0.5, 0.8, 0.5);
         break;
       case Item.TULIP_SEED:
-        this.flower.addComponentOrReplace(getShape(MODELS.tulip));
+        this.flower.addComponentOrReplace(MODELS.tulip);
         this.flower.addComponentOrReplace(
           new Transform({
             position: new Vector3(-0.02, 0.3, 0),
@@ -179,7 +178,7 @@ export class Flowerbed extends Model {
         );
         break;
       case Item.SUNFLOWER_SEED:
-        this.flower.addComponentOrReplace(getShape(MODELS.sunflower));
+        this.flower.addComponentOrReplace(MODELS.sunflower);
         this.flower.addComponentOrReplace(
           new Transform({
             position: new Vector3(0, 0.6, 0),
@@ -188,7 +187,7 @@ export class Flowerbed extends Model {
         );
         break;
       case Item.BEAN_SEED:
-        this.flower.addComponentOrReplace(getShape(MODELS.bean));
+        this.flower.addComponentOrReplace(MODELS.bean);
         this.flower.addComponentOrReplace(
           new Transform({
             position: new Vector3(0, 0.3, 0),
@@ -220,8 +219,8 @@ export class Flowerbed extends Model {
     Inventory.addItem(flower, 1);
 
     this.addPlantButton();
-    this.sprout.getComponent(GLTFShape).visible = false;
-    this.flower.getComponent(GLTFShape).visible = false;
+    this.sprout.removeComponent(GLTFShape);
+    this.flower.removeComponent(GLTFShape);
     this.entity.getComponent(AudioSource).playOnce();
     this.seed = undefined;
   }
