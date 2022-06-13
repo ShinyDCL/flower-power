@@ -1,5 +1,6 @@
 import { ACTIONS, GROUND_LEVEL } from 'src/constants';
 import { Model } from 'src/model';
+import { SOUNDS } from 'src/resources';
 import { userState } from 'src/state';
 import { InstructionLabel } from 'src/ui/instructionLabel';
 import { SimplePrompt } from 'src/ui/simplePrompt';
@@ -35,6 +36,7 @@ export class Bucket extends Model {
     water.setParent(this.entity);
 
     this.water = water;
+    this.entity.addComponentOrReplace(new AudioSource(SOUNDS.pickUp));
     this.addPickUpButton();
 
     // Handle press on 'F' button - but down bucket
@@ -53,6 +55,7 @@ export class Bucket extends Model {
       return;
     }
 
+    this.entity.getComponent(AudioSource).playOnce();
     this.entity.removeComponent(OnPointerDown);
     this.entity.setParent(Attachable.AVATAR);
     this.entity.addComponentOrReplace(
@@ -70,6 +73,7 @@ export class Bucket extends Model {
 
     userState.pickedUpBucket = null;
 
+    this.entity.getComponent(AudioSource).playOnce();
     this.entity.setParent(null);
     this.entity.addComponentOrReplace(
       new Transform({

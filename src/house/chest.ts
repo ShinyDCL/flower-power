@@ -1,9 +1,8 @@
 import { ACTIONS } from 'src/constants';
 import { Model } from 'src/model';
+import { SOUNDS } from 'src/resources';
 
 export class Chest extends Model {
-  private readonly openSound = new AudioClip('models/chest/sounds/open.mp3');
-  private readonly closeSound = new AudioClip('models/chest/sounds/close.mp3');
   private readonly open = 'open';
   private readonly close = 'close';
   private isOpen = false;
@@ -34,11 +33,11 @@ export class Chest extends Model {
 
     if (this.isOpen) {
       closeClip.play();
-      this.entity.addComponentOrReplace(new AudioSource(this.closeSound));
+      this.entity.addComponentOrReplace(new AudioSource(SOUNDS.chestClose));
       this.entity.getComponent(OnPointerDown).hoverText = ACTIONS.open;
     } else {
       openClip.play();
-      this.entity.addComponentOrReplace(new AudioSource(this.openSound));
+      this.entity.addComponentOrReplace(new AudioSource(SOUNDS.chestOpen));
       this.entity.getComponent(OnPointerDown).hoverText = ACTIONS.close;
     }
 

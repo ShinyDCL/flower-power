@@ -1,10 +1,9 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import { ACTIONS } from 'src/constants';
 import { Model } from 'src/model';
+import { SOUNDS } from 'src/resources';
 
 export class Door extends Model {
-  private readonly openSound = new AudioClip('models/door/sounds/open.mp3');
-  private readonly closeSound = new AudioClip('models/door/sounds/close.mp3');
   private isOpen = false;
 
   constructor(model: Model) {
@@ -22,11 +21,11 @@ export class Door extends Model {
     let endRot: Quaternion;
 
     if (this.isOpen) {
-      this.entity.addComponentOrReplace(new AudioSource(this.closeSound));
+      this.entity.addComponentOrReplace(new AudioSource(SOUNDS.doorClose));
       this.entity.getComponent(OnPointerDown).hoverText = ACTIONS.open;
       endRot = Quaternion.Euler(0, -90, 0);
     } else {
-      this.entity.addComponentOrReplace(new AudioSource(this.openSound));
+      this.entity.addComponentOrReplace(new AudioSource(SOUNDS.doorOpen));
       this.entity.getComponent(OnPointerDown).hoverText = ACTIONS.close;
       endRot = Quaternion.Euler(0, 20, 0);
     }

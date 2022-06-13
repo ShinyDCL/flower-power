@@ -1,15 +1,11 @@
 import { Inventory } from 'src/common/inventory';
 import { ACTIONS, Item } from 'src/constants';
 import { Model } from 'src/model';
-import { ITEM_ICONS } from 'src/resources';
+import { ITEM_ICONS, SOUNDS } from 'src/resources';
 import { GemCounter } from 'src/ui/gemCounter';
 import { SimplePrompt } from 'src/ui/simplePrompt';
 
 export class Gem extends Model {
-  private readonly collectSound = new AudioClip(
-    'models/gem/sounds/KeyEquip.mp3'
-  );
-
   constructor(model: Model) {
     super(model);
 
@@ -19,7 +15,7 @@ export class Gem extends Model {
         distance: 3,
       })
     );
-    this.entity.addComponentOrReplace(new AudioSource(this.collectSound));
+    this.entity.addComponentOrReplace(new AudioSource(SOUNDS.collect));
   }
 
   private handleCollect() {

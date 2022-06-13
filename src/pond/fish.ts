@@ -2,7 +2,7 @@ import * as utils from '@dcl/ecs-scene-utils';
 import * as ui from '@dcl/ui-scene-utils';
 import { Inventory } from 'src/common/inventory';
 import { ACTIONS, GROUND_LEVEL, Item } from 'src/constants';
-import { MODELS } from 'src/resources';
+import { MODELS, SOUNDS } from 'src/resources';
 import { getRandomDecimal, getRandomIntInclusive, getShape } from 'src/utils';
 
 const redFishShape = getShape(MODELS.fishRed, true, true, true);
@@ -12,6 +12,8 @@ export class Fish extends Entity {
   private parent: Entity;
   constructor() {
     super();
+
+    this.addComponentOrReplace(new AudioSource(SOUNDS.click));
 
     this.addComponent(
       new Transform({
@@ -68,6 +70,7 @@ export class Fish extends Entity {
 
     Inventory.addItem(fish, 1);
     shape.visible = false;
+    this.getComponent(AudioSource).playOnce();
 
     ui.displayAnnouncement('Cought it!', 1, Color4.Yellow(), 40);
   }

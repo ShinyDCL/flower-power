@@ -11,7 +11,7 @@ import {
   SPROUT_TIMES,
 } from 'src/constants';
 import { Model } from 'src/model';
-import { ITEM_ICONS, MODELS } from 'src/resources';
+import { ITEM_ICONS, MODELS, SOUNDS } from 'src/resources';
 import { userState } from 'src/state';
 import { SeedPrompt } from 'src/ui/seedPrompt';
 import { SimplePrompt } from 'src/ui/simplePrompt';
@@ -33,6 +33,7 @@ export class Flowerbed extends Model {
       getRandomIntInclusive(1, 360),
       0
     );
+    this.entity.addComponentOrReplace(new AudioSource(SOUNDS.click));
 
     this.timer = new Timer(0, 1.3, 0);
     this.timer.setParent(this.entity);
@@ -144,6 +145,7 @@ export class Flowerbed extends Model {
         pickedUpBucket.empty();
         this.spawnFlower();
         this.entity.removeComponent(OnPointerDown);
+        this.entity.getComponent(AudioSource).playOnce();
       } else {
         SimplePrompt.openPrompt('Bucket is empty, get water from well!');
       }
@@ -220,6 +222,7 @@ export class Flowerbed extends Model {
     this.addPlantButton();
     this.sprout.getComponent(GLTFShape).visible = false;
     this.flower.getComponent(GLTFShape).visible = false;
+    this.entity.getComponent(AudioSource).playOnce();
     this.seed = undefined;
   }
 

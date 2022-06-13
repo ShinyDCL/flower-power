@@ -1,15 +1,15 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import { Model } from 'src/model';
+import { SOUNDS } from 'src/resources';
 
 export class Candle extends Model {
-  private readonly clickSound = new AudioClip('models/candle/sounds/click.mp3');
   private isMoved = false;
 
   constructor(model: Model) {
     super(model);
 
     this.transform.rotation = Quaternion.Euler(0, 0, 0);
-    this.entity.addComponentOrReplace(new AudioSource(this.clickSound));
+    this.entity.addComponentOrReplace(new AudioSource(SOUNDS.leverClick));
   }
 
   public toggle() {

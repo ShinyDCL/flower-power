@@ -13,6 +13,18 @@ const MODELS = {
   platform: 'models/platform/Platform.glb',
 };
 
+const SOUNDS = {
+  chestOpen: new AudioClip('sounds/ChestOpen.mp3'),
+  chestClose: new AudioClip('sounds/ChestClose.mp3'),
+  collect: new AudioClip('sounds/Collect.mp3'),
+  leverClick: new AudioClip('sounds/LeverClick.mp3'),
+  move: new AudioClip('sounds/Move.mp3'),
+  doorOpen: new AudioClip('sounds/DoorOpen.mp3'),
+  doorClose: new AudioClip('sounds/DoorClose.mp3'),
+  pickUp: new AudioClip('sounds/PickUp.mp3'),
+  click: new AudioClip('sounds/Click.mp3'),
+};
+
 const IMAGE_TEXTURE = new Texture('images/inventory.png');
 
 const iconSize = {
@@ -138,4 +150,12 @@ const INVENTORY = {
   },
 };
 
-export { MODELS, IMAGE_TEXTURE, PROMPT, ITEM_ICONS, CIRCLES, INVENTORY };
+export {
+  MODELS,
+  SOUNDS,
+  IMAGE_TEXTURE,
+  PROMPT,
+  ITEM_ICONS,
+  CIRCLES,
+  INVENTORY,
+};

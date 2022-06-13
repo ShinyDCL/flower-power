@@ -1,9 +1,9 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import { ACTIONS } from 'src/constants';
 import { Model } from 'src/model';
+import { SOUNDS } from 'src/resources';
 
 export class Couch extends Model {
-  private readonly clickSound = new AudioClip('models/couch/sounds/click.mp3');
   private isMoved = false;
 
   constructor(model: Model) {
@@ -15,7 +15,7 @@ export class Couch extends Model {
         distance: 3,
       })
     );
-    this.entity.addComponentOrReplace(new AudioSource(this.clickSound));
+    this.entity.addComponentOrReplace(new AudioSource(SOUNDS.move));
   }
 
   private toggle() {

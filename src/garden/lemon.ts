@@ -1,7 +1,7 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import { Inventory } from 'src/common/inventory';
 import { ACTIONS, Item } from 'src/constants';
-import { MODELS } from 'src/resources';
+import { MODELS, SOUNDS } from 'src/resources';
 
 import { getRandomIntInclusive, getShape } from 'src/utils';
 
@@ -12,6 +12,7 @@ export class Lemon extends Entity {
     super();
 
     this.positions = positions;
+    this.addComponentOrReplace(new AudioSource(SOUNDS.collect));
     this.addComponentOrReplace(getShape(MODELS.lemon, true, true, true));
     this.addComponentOrReplace(new Transform());
     this.setParent(parent);
@@ -44,6 +45,7 @@ export class Lemon extends Entity {
 
   private handlePickUp() {
     Inventory.addItem(Item.LEMON, 1);
+    this.getComponent(AudioSource).playOnce();
     this.getComponent(GLTFShape).visible = false;
     this.removeComponent(OnPointerDown);
 
