@@ -1,4 +1,3 @@
-import { Inventory } from './inventory';
 import { Bucket } from './pond/bucket';
 
 interface IUserState {
@@ -7,5 +6,3 @@ interface IUserState {
 export const userState: IUserState = {
   pickedUpBucket: null,
 };
-
-export const inventory = new Inventory();

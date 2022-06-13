@@ -1,6 +1,6 @@
+import { Sign } from 'src/common/sign';
 import { scene } from 'src/scene';
 import { Flowerbed } from './flowerbed';
-import { Sign } from './sign';
 import { Store } from './store';
 import { Tree } from './tree';
 
