@@ -1,3 +1,4 @@
+import { SCREEN_HEIGHT, SCREEN_WIDTH } from 'src/constants';
 import { IMAGE_TEXTURE } from 'src/resources';
 import { getRandomDecimal, getRandomIntInclusive } from 'src/utils';
 
@@ -14,8 +15,8 @@ export class Circle extends UIImage {
     super(parent, IMAGE_TEXTURE);
 
     const size = getRandomIntInclusive(100, 300);
-    const x = getRandomIntInclusive(0, 1422 - size);
-    const y = getRandomIntInclusive(0, 686 - size);
+    const x = getRandomIntInclusive(0, SCREEN_WIDTH - size);
+    const y = getRandomIntInclusive(0, SCREEN_HEIGHT - size);
 
     this.dx = getRandomIntInclusive(3, 6);
     this.dy = getRandomIntInclusive(3, 6);

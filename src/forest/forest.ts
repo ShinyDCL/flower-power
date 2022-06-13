@@ -30,7 +30,7 @@ export const setUpForest = () => {
         () => {
           obj.eat();
           platform.move(10);
-          moveSystem.start(10, color);
+          moveSystem.start(11, color);
         },
         {
           hoverText: ACTIONS.eat,

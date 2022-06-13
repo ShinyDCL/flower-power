@@ -1,6 +1,7 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import { movePlayerTo } from '@decentraland/RestrictedActions';
 import { MODELS } from 'src/resources';
+import { getRandomIntInclusive } from 'src/utils';
 
 export class Platform extends Entity {
   private isMoving: boolean = false;
@@ -25,7 +26,8 @@ export class Platform extends Entity {
     this.isMoving = true;
 
     //Define the positions of the path
-    const path: Vector3[] = [];
+    let path: Vector3[] = [];
+    path.push(new Vector3(5.75, -2.2, 27.25));
     path.push(new Vector3(5.75, -0.2, 27.25));
     path.push(new Vector3(5.75, 15, 27.25));
     path.push(new Vector3(16, 15, 28));
@@ -39,8 +41,11 @@ export class Platform extends Entity {
     path.push(new Vector3(5.75, -0.2, 27.25));
     path.push(new Vector3(5.75, -2.2, 27.25));
 
+    const reverse = getRandomIntInclusive(0, 1);
+    if (reverse) path = path.reverse();
+
     void movePlayerTo({ x: 5.75, y: 0.2, z: 27.25 }).then(() => {
-      utils.setTimeout(1, () => {
+      utils.setTimeout(2, () => {
         // Move entity
         this.addComponent(
           new utils.FollowPathComponent(path, duration, () => {

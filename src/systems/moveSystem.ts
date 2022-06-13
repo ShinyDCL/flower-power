@@ -1,3 +1,4 @@
+import { SCREEN_HEIGHT, SCREEN_WIDTH } from 'src/constants';
 import { Circle } from 'src/ui/circle';
 import { ImageSection, setSection } from 'src/utils';
 
@@ -35,14 +36,21 @@ export class MoveSystem implements ISystem {
   }
 
   update(dt: number) {
+    if (this.hasFinished()) {
+      this.stop();
+      this.group.forEach((circle) => {
+        circle.opacity = 0;
+      });
+    }
+
     this.group.forEach((circle) => {
       const { size } = circle;
       let { x, y, dx, dy } = circle;
 
-      if (x + dx + size > 1422 || x + dx < 0) {
+      if (x + dx + size > SCREEN_WIDTH || x + dx < 0) {
         dx = -dx;
       }
-      if (y + dy + size > 686 || y + dy < 0) {
+      if (y + dy + size > SCREEN_HEIGHT || y + dy < 0) {
         dy = -dy;
       }
 
@@ -65,10 +73,6 @@ export class MoveSystem implements ISystem {
       0,
       1
     );
-
-    if (this.hasFinished()) {
-      this.stop();
-    }
   }
 
   hasFinished(): boolean {

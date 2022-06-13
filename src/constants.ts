@@ -98,6 +98,8 @@ const ACTIONS: { [key: string]: string } = {
 
 const GROUND_LEVEL = 0;
 const ACTIVATION_COST = 5000;
+const SCREEN_WIDTH = 1422;
+const SCREEN_HEIGHT = 686;
 
 export {
   Item,
@@ -112,4 +114,6 @@ export {
   ACTIONS,
   GROUND_LEVEL,
   ACTIVATION_COST,
+  SCREEN_WIDTH,
+  SCREEN_HEIGHT,
 };
