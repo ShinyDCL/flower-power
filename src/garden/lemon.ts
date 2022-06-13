@@ -1,7 +1,8 @@
 import * as utils from '@dcl/ecs-scene-utils';
+import { Inventory } from 'src/common/inventory';
 import { ACTIONS, Item } from 'src/constants';
 import { MODELS } from 'src/resources';
-import { inventory } from 'src/state';
+
 import { getRandomIntInclusive, getShape } from 'src/utils';
 
 export class Lemon extends Entity {
@@ -42,7 +43,7 @@ export class Lemon extends Entity {
   }
 
   private handlePickUp() {
-    inventory.addItem(Item.LEMON, 1);
+    Inventory.addItem(Item.LEMON, 1);
     this.getComponent(GLTFShape).visible = false;
     this.removeComponent(OnPointerDown);
 

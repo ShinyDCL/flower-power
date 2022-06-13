@@ -1,4 +1,5 @@
 import * as utils from '@dcl/ecs-scene-utils';
+import { Inventory } from 'src/common/inventory';
 import {
   ACTIONS,
   ACTIVATION_COST,
@@ -11,7 +12,7 @@ import {
 } from 'src/constants';
 import { Model } from 'src/model';
 import { ITEM_ICONS, MODELS } from 'src/resources';
-import { inventory, userState } from 'src/state';
+import { userState } from 'src/state';
 import { SeedPrompt } from 'src/ui/seedPrompt';
 import { SimplePrompt } from 'src/ui/simplePrompt';
 import { Timer } from 'src/ui/timer';
@@ -75,7 +76,7 @@ export class Flowerbed extends Model {
   }
 
   private handleClickPlant(): void {
-    if (inventory.getSeedCount() > 0) {
+    if (Inventory.getSeedCount() > 0) {
       SeedPrompt.openPrompt(this.handleChooseSeed.bind(this));
     } else {
       SimplePrompt.openPrompt(`You don't have any seeds, buy some at market!`);
@@ -83,7 +84,7 @@ export class Flowerbed extends Model {
   }
 
   private handleClickActivate(): void {
-    if (inventory.getItemCount(Item.COINS) >= ACTIVATION_COST) {
+    if (Inventory.getItemCount(Item.COINS) >= ACTIVATION_COST) {
       SimplePrompt.openPrompt(
         'Activate flowerbed!',
         this.handleActivate.bind(this),
@@ -101,8 +102,8 @@ export class Flowerbed extends Model {
   }
 
   private handleActivate(): void {
-    if (inventory.getItemCount(Item.COINS) >= ACTIVATION_COST) {
-      inventory.removeItem(Item.COINS, ACTIVATION_COST);
+    if (Inventory.getItemCount(Item.COINS) >= ACTIVATION_COST) {
+      Inventory.removeItem(Item.COINS, ACTIVATION_COST);
       this.text && engine.removeEntity(this.text);
       this.addPlantButton();
     }
@@ -214,7 +215,7 @@ export class Flowerbed extends Model {
 
   private handleClickHarvest(): void {
     const flower = SEED_FLOWER_MAP[this.seed!];
-    inventory.addItem(flower, 1);
+    Inventory.addItem(flower, 1);
 
     this.addPlantButton();
     this.sprout.getComponent(GLTFShape).visible = false;

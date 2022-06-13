@@ -4,13 +4,9 @@ import { INVENTORY, ITEM_ICONS } from 'src/resources';
 import { Image } from 'src/ui/image';
 
 export class Inventory {
-  private readonly items: { [key: string]: ui.UICounter } = {};
+  private static items: { [key: string]: ui.UICounter } = {};
 
-  constructor() {
-    this.renderInventorySidebar();
-  }
-
-  private renderInventorySidebar() {
+  public static renderInventorySidebar() {
     const keys = Object.keys(Item) as ItemKey[];
     const offsetX = -5;
     let offsetY = 80;
@@ -37,15 +33,15 @@ export class Inventory {
     });
   }
 
-  public addItem(item: Item, count: number): void {
+  public static addItem(item: Item, count: number): void {
     this.items[item].increase(count);
   }
 
-  public removeItem(item: Item, count: number): void {
+  public static removeItem(item: Item, count: number): void {
     this.items[item].decrease(count);
   }
 
-  public getSeedCount(): number {
+  public static getSeedCount(): number {
     let count = 0;
     SEEDS.forEach((seed: Item) => {
       count += this.items[seed].read();
@@ -53,7 +49,7 @@ export class Inventory {
     return count;
   }
 
-  public getItemCount(item: Item): number {
+  public static getItemCount(item: Item): number {
     return this.items[item].read();
   }
 }

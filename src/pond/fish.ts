@@ -1,8 +1,8 @@
 import * as utils from '@dcl/ecs-scene-utils';
 import * as ui from '@dcl/ui-scene-utils';
+import { Inventory } from 'src/common/inventory';
 import { ACTIONS, GROUND_LEVEL, Item } from 'src/constants';
 import { MODELS } from 'src/resources';
-import { inventory } from 'src/state';
 import { getRandomDecimal, getRandomIntInclusive, getShape } from 'src/utils';
 
 const redFishShape = getShape(MODELS.fishRed, true, true, true);
@@ -66,7 +66,7 @@ export class Fish extends Entity {
     const shape = this.getComponent(GLTFShape);
     const fish = shape === redFishShape ? Item.RED_FISH : Item.GREEN_FISH;
 
-    inventory.addItem(fish, 1);
+    Inventory.addItem(fish, 1);
     shape.visible = false;
 
     ui.displayAnnouncement('Cought it!', 1, Color4.Yellow(), 40);

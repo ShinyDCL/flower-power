@@ -1,4 +1,5 @@
 import * as ui from '@dcl/ui-scene-utils';
+import { Inventory } from 'src/common/inventory';
 import { ItemComponent } from 'src/components/itemComponent';
 import {
   ACTIONS,
@@ -8,7 +9,6 @@ import {
   ITEM_VALUES,
 } from 'src/constants';
 import { IMAGE_TEXTURE, ITEM_ICONS, PROMPT } from 'src/resources';
-import { inventory } from 'src/state';
 import { setSection } from 'src/utils';
 
 export class MarketPrompt {
@@ -69,11 +69,11 @@ export class MarketPrompt {
         positionY,
         (() => {
           if (action === ACTIONS.buy) {
-            inventory.addItem(item, 1);
-            inventory.removeItem(Item.COINS, ITEM_VALUES[item]);
+            Inventory.addItem(item, 1);
+            Inventory.removeItem(Item.COINS, ITEM_VALUES[item]);
           } else {
-            inventory.removeItem(item, 1);
-            inventory.addItem(Item.COINS, ITEM_VALUES[item]);
+            Inventory.removeItem(item, 1);
+            Inventory.addItem(Item.COINS, ITEM_VALUES[item]);
           }
           this.updateItemAvailability();
         }).bind(this),
@@ -116,11 +116,11 @@ export class MarketPrompt {
       const action = itemComponent.getAction();
 
       if (action === ACTIONS.buy) {
-        inventory.getItemCount(Item.COINS) < ITEM_VALUES[item]
+        Inventory.getItemCount(Item.COINS) < ITEM_VALUES[item]
           ? button.grayOut()
           : button.enable();
       } else {
-        inventory.getItemCount(item) <= 0 ? button.grayOut() : button.enable();
+        Inventory.getItemCount(item) <= 0 ? button.grayOut() : button.enable();
       }
     });
   }

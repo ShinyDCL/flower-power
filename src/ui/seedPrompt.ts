@@ -1,8 +1,8 @@
 import * as ui from '@dcl/ui-scene-utils';
+import { Inventory } from 'src/common/inventory';
 import { ItemComponent } from 'src/components/itemComponent';
 import { Item, ITEM_TITLES, Seed, SEEDS } from 'src/constants';
 import { IMAGE_TEXTURE, ITEM_ICONS, PROMPT } from 'src/resources';
-import { inventory } from 'src/state';
 import { setSection } from 'src/utils';
 
 export class SeedPrompt {
@@ -78,10 +78,10 @@ export class SeedPrompt {
     buttons.forEach((button: ui.CustomPromptButton) => {
       const item = button.getComponent(ItemComponent).getItem();
 
-      inventory.getItemCount(item) <= 0 ? button.grayOut() : button.enable();
+      Inventory.getItemCount(item) <= 0 ? button.grayOut() : button.enable();
 
       button.image.onClick = new OnPointerDown(() => {
-        inventory.removeItem(item, 1);
+        Inventory.removeItem(item, 1);
         onSelect(item as Seed);
         this.prompt.hide();
       });

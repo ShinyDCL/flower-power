@@ -1,7 +1,7 @@
+import { Inventory } from 'src/common/inventory';
 import { ACTIONS, Item } from 'src/constants';
 import { Model } from 'src/model';
 import { ITEM_ICONS } from 'src/resources';
-import { inventory } from 'src/state';
 import { GemCounter } from 'src/ui/gemCounter';
 import { SimplePrompt } from 'src/ui/simplePrompt';
 
@@ -27,7 +27,7 @@ export class Gem extends Model {
     this.entity.getComponent(AudioSource).playOnce();
 
     if (GemCounter.getCount() === 5) {
-      inventory.addItem(Item.BEAN_SEED, 1);
+      Inventory.addItem(Item.BEAN_SEED, 1);
       GemCounter.hide();
       SimplePrompt.openPrompt(
         'Congrats, here is your gift!',

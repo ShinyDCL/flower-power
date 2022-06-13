@@ -2,11 +2,13 @@ import { Item } from './constants';
 import { setUpHouse } from './house/house';
 import { setUpGarden } from './garden/garden';
 import { setUpPond } from './pond/pond';
-import { inventory } from './state';
 import { setUpForest } from './forest/forest';
+import { Inventory } from './common/inventory';
+
+Inventory.renderInventorySidebar();
 
 // Add starter seeds to inventory
-inventory.addItem(Item.ROSE_SEED, 3);
+Inventory.addItem(Item.ROSE_SEED, 3);
 
 // Set up four scene areas
 setUpGarden();
