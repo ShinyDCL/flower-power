@@ -1,3 +1,4 @@
+import { Sign } from 'src/common/sign';
 import { ACTIONS } from 'src/constants';
 import { scene } from 'src/scene';
 import { Bed } from './bed';
@@ -8,6 +9,7 @@ import { Door } from './door';
 import { Gem } from './gem';
 
 export const setUpHouse = () => {
+  new Sign(scene.signHouse, 'Find 5 gems\n in the house');
   const bed = new Bed(scene.bed);
   const candle = new Candle(scene.candle);
   candle.entity.addComponent(

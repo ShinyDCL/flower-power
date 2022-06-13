@@ -2073,10 +2073,10 @@
         },
         {
             "hierarchyOrder": 4.0,
-            "name": "Sign Forest",
+            "name": "Sign Garden",
             "uniqueNumber": 225,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {
@@ -2091,10 +2091,10 @@
         },
         {
             "hierarchyOrder": 2.0,
-            "name": "Sign Pond",
+            "name": "Sign Garden",
             "uniqueNumber": 226,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {
@@ -2109,10 +2109,10 @@
         },
         {
             "hierarchyOrder": 3.0,
-            "name": "Sign House",
+            "name": "Sign Garden",
             "uniqueNumber": 227,
             "parent": -1,
-            "exposed": true,
+            "exposed": false,
             "collapsedChildren": false,
             "components": [
                 {

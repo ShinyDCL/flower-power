@@ -1,9 +1,11 @@
+import { Sign } from 'src/common/sign';
 import { scene } from 'src/scene';
 import { Bucket } from './bucket';
 import { Fish } from './fish';
 import { Well } from './well';
 
 export const setUpPond = () => {
+  new Sign(scene.signPond, 'Catch fish');
   // Create invisible box that blocks user from going onto pond
   const boxShape = new BoxShape();
   boxShape.visible = true;

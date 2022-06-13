@@ -1,4 +1,5 @@
 import { canvas } from '@dcl/ui-scene-utils';
+import { Sign } from 'src/common/sign';
 import { ACTIONS } from 'src/constants';
 import { CIRCLES } from 'src/resources';
 import { scene } from 'src/scene';
@@ -8,6 +9,7 @@ import { Mushroom } from './mushroom';
 import { Platform } from './platform';
 
 export const setUpForest = () => {
+  new Sign(scene.signForest, 'Magic forest');
   const platform = new Platform();
 
   const moveSystem = new MoveSystem();
