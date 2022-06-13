@@ -1,6 +1,7 @@
 import { ACTIONS, GROUND_LEVEL } from 'src/constants';
 import { Model } from 'src/model';
 import { userState } from 'src/state';
+import { InstructionLabel } from 'src/ui/instructionLabel';
 import { SimplePrompt } from 'src/ui/simplePrompt';
 
 const waterColor = '#9dcffa';
@@ -60,6 +61,7 @@ export class Bucket extends Model {
       })
     );
     userState.pickedUpBucket = this;
+    InstructionLabel.show('Press F to put down bucket');
   }
 
   private handlePutDown({ origin, direction }: LocalActionButtonEvent): void {
@@ -80,6 +82,7 @@ export class Bucket extends Model {
     );
 
     this.addPickUpButton();
+    InstructionLabel.hide();
   }
 
   private addPickUpButton() {
