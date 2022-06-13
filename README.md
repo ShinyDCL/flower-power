@@ -22,29 +22,46 @@ dcl start
 
 Any dependencies are installed and then the CLI opens the scene in a new browser tab.
 
-## Deploy to Decentraland
+## Scene description
 
-If you own any parcels of land in Decentraland, or have permissions to deploy to someone else's, you can publish this project.
+This scene contains a game developed during 2022 Decentraland Game Jam
+Checkout the deployed version [here](https://flower-power-dcl.herokuapp.com/?realm=localhost-stub&renderer-branch=master&position=0,0)
 
-1. Make sure the scene parcels in `scene.json` match those you own or have permissions on.
-2. Run `dcl deploy` on the project folder
-3. This will open a browser tab to confirm. Metamask will prompt you to sign.
-   > Note: Make sure you are using the wallet that owns the parcels or has permissions.
+### Game description
 
-### Deploy to a free server
+Game consists of four areas with different activities
 
-If you don't own parcels in Decentraland or are not ready to publish your scene to the world, you can share your creations by uploading your scenes to a free hosting service.
+**Garden and market area**
 
-See [Upload a preview](https://docs.decentraland.org/development-guide/deploy-to-now/) for instructions on how to do this.
+- plant seeds and water them to grow flowers
+- sell produce at market for coins
+- activate extra flowerbeds for planting by using coins
+- shake lemon trees to get lemons and sell them at market
 
-## Resources
+**House area**
 
-Learn more about how to build your own scenes in our [documentation](https://docs.decentraland.org/) site.
+- do a scavenger hunt to find 5 gems and receive a gift
 
-Find more example scenes, tutorials and helper libraries in the [Awesome Repository](https://github.com/decentraland-scenes/Awesome-Repository).
+**Pond area**
 
-If you need any help, join [Decentraland's Discord](https://dcl.gg/discord), where you'll find a vibrant community of other creators who are eager to help. You're sure to find help in the #SDK support channel.
+- catch fish in the pond which can be sold at the market
+- get water from well with bucket to water plants in Garden and market area
 
-## Copyright info
+**Forest area**
 
-This scene is protected with a standard Apache 2 licence. See the terms and conditions in the [LICENSE](/LICENSE) file.
+- eat mushrooms and experience different effects
+
+### Images, 3D models, sounds
+
+All assets used in this game are from Decentraland builder, with exception of few assets which were created by myself.
+No assets from other websites or people are used in this game.
+
+### Tools and libraries
+
+- DCL-Edit tool - used for editing scene (downloaded models from builder, copied them into project, placed them in scene with DCL-Edit tool and exposed to script, added interactions to entities in code)
+- @dcl/ecs-scene-utils - used for moving or rotating an entity over a period of time
+- @dcl/ui-scene-utils - used for displaying prompts, counters and announcements
+
+### Backend
+
+There is no backend developed for this scene and all the data is stored locally, meaning all the progress is lost upon refreshing the scene.
