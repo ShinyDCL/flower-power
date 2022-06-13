@@ -1,6 +1,0 @@
-{
-    "translateSnapStep": 0.25,
-    "rotateSnapStep": 15.0,
-    "scaleSnapStep": 0.25,
-    "generateScriptLocation": "src/scene.ts"
-}
