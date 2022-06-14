@@ -42,9 +42,9 @@ export class Fish extends Entity {
 
     // Define the positions of the path
     const path = [];
-    path.push(new Vector3(X1, GROUND_LEVEL - 0.5, Z1));
+    path.push(new Vector3(X1, GROUND_LEVEL - 0.3, Z1));
     path.push(new Vector3((X1 + X2) / 2, Y, (Z1 + Z2) / 2));
-    path.push(new Vector3(X2, GROUND_LEVEL - 0.5, Z2));
+    path.push(new Vector3(X2, GROUND_LEVEL - 0.3, Z2));
 
     // Randomize from which side fish starts to jump
     getRandomIntInclusive(1, 2) === 1 && path.reverse();
@@ -53,7 +53,6 @@ export class Fish extends Entity {
     this.addComponentOrReplace(
       getRandomIntInclusive(1, 2) === 1 ? MODELS.fishRed : MODELS.fishGreen
     );
-    //this.getComponent(GLTFShape).visible = true;
 
     // Move entity
     this.parent.addComponentOrReplace(
