@@ -4,7 +4,7 @@ import { MODELS } from 'src/resources';
 import { getRandomIntInclusive } from 'src/utils';
 
 export class Platform extends Entity {
-  private isMoving: boolean = false;
+  public isMoving: boolean = false;
 
   constructor() {
     super();

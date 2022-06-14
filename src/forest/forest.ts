@@ -28,9 +28,11 @@ export const setUpForest = () => {
     obj.entity.addComponentOrReplace(
       new OnPointerDown(
         () => {
+          if (platform.isMoving && moveSystem.active) return;
+
           obj.eat();
           platform.move(10);
-          moveSystem.start(11, color);
+          moveSystem.start(10, color);
         },
         {
           hoverText: ACTIONS.eat,
