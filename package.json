@@ -14,8 +14,8 @@
     "lint:fix": "eslint . --ext .ts --fix"
   },
   "devDependencies": {
-    "@dcl/eslint-config": "^1.0.1",
-    "decentraland-ecs": "latest"
+    "@dcl/eslint-config": "^1.0.6",
+    "decentraland-ecs": "^6.11.10"
   },
   "engines": {
     "node": ">=14.0.0",
@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "@dcl/ecs-scene-utils": "^1.7.5",
-    "@dcl/ui-scene-utils": "^1.8.3",
-    "decentraland": "^3.10.4"
+    "@dcl/ui-scene-utils": "^1.8.4",
+    "decentraland": "^3.12.3"
   },
   "bundledDependencies": [
     "@dcl/ecs-scene-utils",
